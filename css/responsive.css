@@ -5,6 +5,10 @@
     }
     section{
         text-align: center;
+        padding: 0 1rem;
+    }
+    #about .ab_list {
+        text-align: left;
     }
     /************* side nav start ***********/
     #side_nav{
@@ -112,7 +116,7 @@
     #about .ab_list{
         padding: 0;
     }
-    #about .skill_content .prog_area .prog_group{
+    #about .skill_content .prog_area{
         padding: 0 2rem;
     }
 }
