@@ -16,6 +16,11 @@ const item_link = document.querySelectorAll('.item_link');
 for(item of item_link){
   item.addEventListener('click',function(){
     side_content.classList.remove("boom");
+
+    if(nav_toggle.classList.contains('boom')){
+      nav_toggle.classList.remove('boom');
+      side_content.classList.remove('boom');
+    }
   })
 }
 
