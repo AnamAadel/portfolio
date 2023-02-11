@@ -23,10 +23,15 @@ window.addEventListener('scroll',function(){
   let inWidth = window.innerWidth;
   if(inWidth < 992){
     const scrolling = window.scrollY;
-    if(scrolling>300){
+    if(scrolling>70){
       side_nav.classList.add('boom');
     }else{
       side_nav.classList.remove('boom');
+      
+      if(nav_toggle.classList.contains('boom')){
+        nav_toggle.classList.remove('boom');
+        side_content.classList.remove('boom');
+      }
 
     }
 
