@@ -1,6 +1,6 @@
 /************* media 992px start************/
 @media screen and (max-width: 992px){
-    #main_wraper{
+    .main_wraper{
         margin: 0;
     }
     section{
@@ -111,6 +111,9 @@
     }
     #about .ab_list{
         padding: 0;
+    }
+    #about .skill_content .prog_area .prog_group{
+        padding: 0 2rem;
     }
 }
 @media screen and (max-width: 300px){

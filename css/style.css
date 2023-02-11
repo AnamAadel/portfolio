@@ -64,7 +64,7 @@ html,body{
     z-index: -1;
     pointer-events: none;
     text-transform: uppercase;
-    /* opacity: .2; */
+    opacity: .6;
     color: var(--cream);
 }
 .heading::after{
