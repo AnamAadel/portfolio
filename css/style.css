@@ -398,7 +398,32 @@ section{
 /*********==========******** services area start *********==========*********/
 
 #services .ser_box{
-    padding-bottom: 2rem;
+    padding-bottom: .8rem;
+    padding-left: 1rem;
+    position: relative;
+    margin-bottom: 1rem;
+}
+#services .ser_box::after{
+    content: '';
+    width: 2px;
+    height: 0%;
+    background: var(--blue);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    transition: var(--trans);
+    -webkit-transition: var(--trans);
+    -moz-transition: var(--trans);
+    -ms-transition: var(--trans);
+    -o-transition: var(--trans);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+#services .ser_box:hover::after{
+    height: 100%;
 }
 #services .ser_box .icon{
     width: 60px;
@@ -422,16 +447,10 @@ section{
 }
 #services .ser_box:hover .icon{
     border-color: var(--blue);
-    box-shadow: none;
 }
-#services .ser_box .icon span{
+#services .ser_box .icon .material-symbols-outlined{
     font-size: 2rem;
     color: var(--black);
-    transition: var(--trans);
-    -webkit-transition: var(--trans);
-    -moz-transition: var(--trans);
-    -ms-transition: var(--trans);
-    -o-transition: var(--trans);
 }
 #services .ser_box .ser_tex .title{
     font-family: var(--OpenSans);
@@ -444,9 +463,6 @@ section{
     -moz-transition: var(--trans);
     -ms-transition: var(--trans);
     -o-transition: var(--trans);
-}
-#services .ser_box:hover .ser_tex .title{
-    color: var(--blue);
 }
 #services .ser_box .ser_tex .btn{
     font-family: var(--OpenSans);
