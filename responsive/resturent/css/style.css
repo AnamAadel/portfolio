@@ -1,0 +1,527 @@
+/* google font grand hotel & montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Grand+Hotel&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root{
+    --grand_hotel: 'Grand Hotel', cursive;
+    --Montserrat: 'Montserrat', sans-serif;
+    --yellow: #FEC100;
+    --red: #F02D00;
+    --dark: #2F2F2F;
+    --white: #fff;
+    --light_blue: #F4F4F4;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    scroll-behavior: smooth;
+    cursor: url(../images/cursor1.png),auto;
+    overflow-x: hidden;
+}
+.cursor{
+    width: 46px;
+    height: 46px;
+    background: var(--red);
+    border-radius: 50%;
+    opacity: .5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    transform: translate(-40%,-40%);
+    pointer-events: none;
+}
+.preload{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999999;
+    background: var(--white) url(../images/food_1.gif) no-repeat center;
+    background-size: contain;
+}
+p,a,span{
+    font-family: var(--Montserrat);
+}
+h1,h2,h3,h4{
+    font-family: var(--grand_hotel);
+}
+a{
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+}
+section{
+    padding: 100px 0 120px;
+}
+@media screen and (max-width: 992px){
+    section{
+        padding: 50px 0 60px;
+    }
+}
+.heading{
+    font-size: 60px;
+}
+.paragraph{
+    font-size: 23px;
+}
+/* common css end */
+.navbar{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    padding: 25px;
+    transition: all linear .3s;
+}
+.navbar.position{
+    position: fixed;
+    background: var(--dark);
+    padding: 10px 0 !important;
+}
+.navbar .navbar-nav{
+    gap: 25px;
+}
+.navbar .navbar-nav .navbar-toggler{
+    z-index: 1;
+}
+.navbar .navbar-nav .nav-link{
+    color: #fff;
+    font-family: var(--Montserrat);
+    font-size: 18px;
+    font-weight: 400;
+    transition: all linear .3s;
+    padding: 15px;
+}
+.navbar .navbar-nav .nav-link:hover{
+    background: var(--yellow);
+}
+.navbar form input[type="search"]{
+    opacity: 0;
+    visibility: hidden;
+    font-size: 18px;
+    width: 40px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    padding:0 25px 0 15px;
+    transition: all linear .3s;
+}
+.navbar form.focus .search{
+    opacity: 1;
+    visibility: visible;
+    width: 150px;
+}
+.navbar form .searchBtn{
+    color: #fff;
+    font-size: 18px;
+    padding: 0 15px;
+    transition: all linear .3s;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.navbar form.focus .searchBtn{
+    color: #000;
+}
+@media screen and (max-width: 992px){
+    .navbar-collapse{
+        background: var(--dark);
+    }
+    .navbar form input[type="search"]{
+        opacity: 1;
+        visibility: visible;
+        width: 150px;
+    }
+    .navbar form .searchBtn{
+        color: #000;
+    }
+}
+/* banner start */
+.banner{
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    padding: 255px 0;
+    overflow: hidden;
+}
+.banner_bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../images/banner.png) no-repeat center;
+    background-size: cover;
+    z-index: -1;
+}
+.banner_bg div{
+    position: absolute;
+}
+.banner_bg img{
+    width: 100%;
+    animation: rotate 18s linear infinite;
+}
+@keyframes rotate {
+    from{
+        transform: rotate(0deg) translate(0,0);
+    }
+    to{
+        transform: rotate(360deg) translate(0,0);
+    }
+}
+.banner_bg .lemon1{
+    width: 30px;
+    top: 12%;
+    left: 39%;
+}
+.banner_bg .pepper{
+    width: 90px;
+    top: 13%;
+    left: 72%;
+}
+.banner_bg .leave{
+    width: 70px;
+    top: 30%;
+    left: 36%;
+}
+.banner_bg .lemon2{
+    width: 30px;
+    top: 80%;
+    left: 45%;
+}
+.banner_bg .lemon3{
+    width: 30px;
+    top: 74%;
+    left: 70%;
+}
+.banner_bg .lemon4{
+    width: 30px;
+    top: 38%;
+    left: 85%;
+}
+.banner_bg .tomato{
+    width: 70px;
+    top: 77%;
+    left: 56%;
+}
+.banner_bg .onion{
+    width: 70px;
+    top: 64%;
+    left: 84%;
+}
+.banner_bg .S_onion{
+    width: 15px;
+    top: 88%;
+    left: 81%;
+}
+
+.banner .row .col h1{
+    font-size: 104.63px;
+    text-transform: capitalize;
+    color: var(--yellow);
+}
+.banner .row .col p{
+    font-size: 20.75px;
+    margin-bottom: 35px;
+}
+.banner .row .col .ban_btn{
+    font-size: 18px;
+    padding: 20px 60px;
+    background: var(--yellow);
+    color: #fff;
+    transition: all linear .3s;
+    text-transform: uppercase;
+}
+.banner .row .col .ban_btn:hover{
+    background: var(--red);
+}
+/* @media screen and (max-width: 772px){
+    .banner .row .col{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+} */
+/************* banner end ********************/
+/******************** best seller start **************/
+#best_seller .row .col{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+}
+#best_seller .row .col img{
+    width: 240px;
+    pointer-events: none;
+}
+#best_seller .row .col h3{
+    font-size: 41.67px;
+    margin: 16px 0 25px;
+}
+/******************** best seller end **************/
+/******************** oriental test start **************/
+/* #oriental{
+    position: relative;
+} */
+.sectionBg{
+    width: 100%;
+    background: url(../images/designBg2.png)no-repeat;
+    background-size: cover;
+}
+#oriental .col{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#oriental .col img{
+    width: 460px;
+}
+@media screen and (max-width: 768px){
+    #oriental .col img{
+        width: 360px;
+    }
+}
+@media screen and (max-width: 360px){
+    #oriental .col img{
+        width: 200px;
+    }
+}
+#oriental .col h2{
+    font-size: 100px;
+    color: var(--yellow);
+}
+
+#oriental .col p{
+    font-size: 25px;
+    margin: 57px 0 65px;
+    color: var(--white);
+}
+#oriental .col .orderBtn{
+    font-size: 25px;
+    font-weight: 700;
+    padding: 10px 60px;
+    background: var(--yellow);
+    color: var(--dark);
+    text-transform: uppercase;
+    transition: all linear .3s;
+}
+#oriental .col .orderBtn:hover{
+    background: var(--red);
+}
+/******************** oriental test end **************/
+/******************** stalistics start **************/
+#stalistics{
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+.animated_object{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.animated_object div{
+    position: absolute;
+}
+.animated_object img{
+    width: 100%;
+    animation: rotate 18s linear infinite;
+}
+.animated_object .lemon1{
+    width: 30px;
+    left: 15%;
+    top: -4%;
+}
+.animated_object .pepper{
+    width: 90px;
+    top: 99%;
+    left: 27%;
+}
+.animated_object .pepper2{
+    width: 90px;
+    left: 70%;
+    top: 36%;
+}
+.animated_object .leave{
+    width: 70px;
+    top: 67%;
+    left: 7%;
+
+}
+.animated_object .lemon2{
+    width: 30px;
+    top: 129%;
+    left: 11%;
+}
+.animated_object .lemon3{
+    width: 30px;
+    top: 24%;
+    left: 88%;
+}
+.animated_object .tomato{
+    width: 70px;
+    top: 99%;
+    left: 69%;
+}
+.animated_object .onion{
+    width: 70px;
+    top: 52%;
+    left: 89%;
+}
+.animated_object .S_onion{
+    width: 15px;
+    top: 103%;
+    left: 89%;
+}
+#stalistics h2.heading{
+    color: var(--yellow);
+}
+#stalistics .paragraph{
+    color: var(--white);
+}
+#stalistics .col{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#stalistics .stat_box{
+    text-align: center;
+    width: 230px;
+    height: 230px;
+    color: var(--white);
+    border: 3px solid var(--white);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#stalistics .stat_box span{
+    font-size: 50.53px;
+    color: var(--yellow);
+    font-weight: 700;
+}
+#stalistics .stat_box p{
+    font-size: 28.87px;
+    color: var(--white);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+/******************** stalistics end **************/
+/******************** about start **************/
+#Lenora{
+    background: linear-gradient(rgba(255,194,0,.8),rgba(255,194,0,.8)), url(../images/bgImage.png) no-repeat center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-blend-mode: screen;
+    margin-top: 100px;
+    padding: 150px 0;
+    color: var(--dark);
+}
+#Lenora .Lenora_para{
+    font-size: 44.9px;
+    font-weight: 400;
+}
+#Lenora .Lenora_title{
+    font-size: 74.19px;
+}
+/******************** about end **************/
+/******************** subscribe start **************/
+#subscribe{
+    background: var(--light_blue);
+    padding: 250px 0;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+#subscribe form{
+    width: 75%;
+}
+#subscribe form input{
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 25px;
+}
+#subscribe form .input-group-text{
+    /* padding: 15px 30px; */
+    color: var(--dark);
+    background: var(--yellow);
+    font-size: 25px;
+    font-weight: 700;
+    transition: all linear .3s;
+    
+}
+@media screen and (max-width: 500px){
+    #subscribe form{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    #subscribe form input{
+        width: 100%;
+        font-size: 15px;
+    }
+    #subscribe form .input-group-text{
+        font-size: 15px;
+    }
+}
+#subscribe form .input-group-text:hover{
+    background: var(--red);
+    color: var(--white);
+}
+/* @media screen and (max-width: 768px) {
+    #subscribe form{
+        width: 100%;
+    }
+} */
+/******************** subscribe end **************/
+/******************** footer start **************/
+footer{
+    padding: 180px 0;
+    background: var(--dark);
+    color: var(--white);
+}
+@media screen and (max-width: 992px) {
+    footer{
+        padding: 100px 0;
+    }
+}
+footer .social a{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--white);
+    color: var(--dark);
+    border-radius: 50%;
+    font-size: 18px;
+    transition: all linear .3s;
+}
+footer .social a:hover{
+    color: var(--yellow);
+}
+footer h5{
+    font-family: var(--Montserrat);
+    font-size: 25px;
+    text-transform: uppercase;
+    margin-bottom: 44px;
+}
+footer p,footer a{
+    font-size: 20px;
+}
+footer a{
+    white-space: nowrap;
+}
+/******************** footer end **************/

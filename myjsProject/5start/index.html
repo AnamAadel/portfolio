@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="star"><i class="fas fa-star" ></i></div>
+    <div class="star"><i class="fas fa-star" ></i></div>
+    <div class="star"><i class="fas fa-star" ></i></div>
+    <div class="star"><i class="fas fa-star" ></i></div>
+    <div class="star"><i class="fas fa-star" ></i></div>
+
+    <script src="./js/all.min.js"></script>
+    <script>
+        const star = document.querySelectorAll('.star');
+
+        for(var x=0;x<star.length;x++){
+            star[x].starValue = x+1;
+            console.log(star[x].starValue);
+
+            ['mouseover','mouseout','click'].forEach(function(e){
+                star[x].addEventListener(e,showRating);
+            })
+        }
+
+         
+        function showRating(e){
+            let type = e.type;
+            // console.log(type);
+
+           let starValue = this.starValue;
+           console.log(starValue);
+
+           star.forEach(function(elem,ind){
+            if(type === 'click'){
+                if(ind<starValue){
+                    elem.classList.add('orange');
+
+                }else{
+                    
+                    elem.classList.remove('orange');
+                }
+            }
+
+
+            if(type === 'mouseover'){
+                if(ind<starValue){
+    
+                    elem.classList.add('yellow');
+                }else{
+                    
+                    elem.classList.remove('yellow');
+                }
+            }
+            if(type === 'mouseout'){
+                if(ind<starValue){
+                    elem.classList.remove('yellow');
+                }
+            }
+        })
+        }
+    </script>
+</body>
+</html>

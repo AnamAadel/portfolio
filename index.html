@@ -21,7 +21,15 @@
     <link rel="stylesheet" href="./css/responsive.css" />
 </head>
 <body>
-    
+        <!-- live preview area start -->
+        <div class="livePreviewBox">
+
+            <div class="livePrievew">
+                <iframe class="liveContent" src=""></iframe>
+            </div>
+            <span class="close"><i class="fa-solid fa-xmark"></i></span>
+        </div>
+        <!-- live preview area end -->
 
         <!--*********======****** side navigation start *********======******-->
         <aside id="side_nav" class="side_nav">
@@ -40,6 +48,8 @@
                         <li><a class="item_link" href="#services">What i do</a></li>
                         <li><a class="item_link" href="#project1">Project 1</a></li>
                         <li><a class="item_link" href="#project2">Project 2</a></li>
+                        <li><a class="item_link" href="#jsProject">Js Project</a></li>
+                        <li><a class="item_link" href="#gsap">Gsap Project</a></li>
                     </ul>
                     
                     <div class="social">
@@ -63,11 +73,14 @@
                         <div class="pars_image d-block d-lg-none">
                             <img src="./images/parson.png" alt="">
                         </div>
-                        <h4 class="welcome">Welcome</h4>
-                        <h2 class="mine">i'm <span class="profession"></span ></h2>
-                        <p class="intro">As a professional web designer/developer from Bangladesh, I strive for perfection in delivering high-quality designs and front-end development through continuous skill improvement.</p>
-                            <a href="#project1" class="port_btn">My Portfolio</a>
-                           <a href="#about" class="down"><i class="fa-solid fa-arrow-down"></i></a>
+                        <div id="text">
+                            <h4 class="welcome op">Welcome</h4>
+                            <h2 class="mine op">i'm <span class="profession"></span ></h2>
+                            <p class="intro op">As a professional web designer/developer from Bangladesh, I strive for perfection in delivering high-quality designs and front-end development through continuous skill improvement.</p>
+                                <a href="#project1" class="port_btn op">My Portfolio</a>
+                               <a href="#about" class="down op"><i class="fa-solid fa-arrow-down"></i></a>
+
+                        </div>
                         </div>
                     </div>
                 </div>
@@ -79,19 +92,19 @@
             <div class="container px-0 px-lg-5">
                 <div class="row">
                     <div class="col text-center">
-                        <h2 class="heading" data-text="About me">know me more</h2>
+                        <h2 class="heading tAni" data-text="About me">know me more</h2>
                     </div>
                 </div>
                 <div class="content">
                     <div class="row">
                         <div class="col-12 col-md-7 col-lg-8">
                             <div class="about_text">
-                                <h3 class="mySelf">i'm <span>Aadel Banat,</span> a junior front-end Developer</h3>
-                                <p class="ab_para">I will create a professional and responsive website design for your business or personal use. My design will be optimized for all devices and tailored to your specific needs. i will work closely with you to ensure that the final product exceeds your expectations. you will receive the final design in HTML and CSS formats.</p>
+                                <h3 class="mySelf tAni">i'm <span>Aadel Banat,</span> a junior front-end Developer</h3>
+                                <p class="ab_para tAni">I will create a professional and responsive website design for your business or personal use. My design will be optimized for all devices and tailored to your specific needs. i will work closely with you to ensure that the final product exceeds your expectations. you will receive the final design in HTML and CSS formats.</p>
                             </div>
                         </div>
                         <div class="col-12 col-md-5 col-lg-4">
-                            <ul class="ab_list">
+                            <ul class="ab_list tAni">
                                 <li><b>Name:</b> Aadel Banat</li>
                                 <li><b>Email:</b><span class="email">acount1234@gamil.com </span></li>
                                 <li><b>Age:</b> 23</li>
@@ -112,10 +125,10 @@
                                                 <!-- html -->
                                                 <div class="prog_title">
                                                     <span>HTML</span>
-                                                    <span>70%</span>
+                                                    <span class="parc" data-parc="70"></span>
                                                 </div>
                                                 <div class="progress">
-                                                    <div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    <div class="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                                                 </div>
                                             </div>
 
@@ -123,10 +136,10 @@
                                             <div class="prog_group">
                                                 <div class="prog_title">
                                                     <span>CSS</span>
-                                                    <span>60%</span>
+                                                    <span class="parc" data-parc="70"></span>
                                                 </div>
                                                 <div class="progress">
-                                                    <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    <div class="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                                                 </div>
                                             </div>
 
@@ -134,34 +147,47 @@
                                             <div class="prog_group">
                                                 <div class="prog_title">
                                                     <span>JavaScript</span>
-                                                    <span>30%</span>
+                                                    <span class="parc" data-parc="50"></span>
                                                 </div>
                                                 <div class="progress">
-                                                    <div class="progress-bar" role="progressbar" style="width: 30%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    <div class="progress-bar" role="progressbar"  aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                                                 </div>
                                             </div>
 
                                             <!-- Tailwindcss -->
-                                            <div class="prog_group">
+                                            <!-- <div class="prog_group">
                                                 <div class="prog_title">
                                                     <span>Tailwindcss</span>
-                                                    <span>80%</span>
+                                                    <span class="parc" data-parc="50"></span>
                                                 </div>
                                                 <div class="progress">
-                                                    <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    <div class="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                                                 </div>
-                                            </div>
+                                            </div> -->
 
                                             <!-- Photoshop -->
                                             <div class="prog_group">
                                                 <div class="prog_title">
-                                                    <span>Tailwindcss</span>
-                                                    <span>30%</span>
+                                                    <span>Photoshop</span>
+                                                    <span class="parc" data-parc="30"></span>
                                                 </div>
                                                 <div class="progress">
-                                                    <div class="progress-bar" role="progressbar" style="width: 30%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    <div class="progress-bar" role="progressbar"  aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                                                 </div>
                                             </div>
+
+                                            <!-- gsap -->
+                                            <div class="prog_group">
+                                                <div class="prog_title">
+                                                    <span>Gsap</span>
+                                                    <span class="parc" data-parc="40"></span>
+                                                </div>
+                                                <div class="progress">
+                                                    <div class="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+
+
                                         </div>
                                     </div>
                                     <!-- collumn two -->
@@ -172,10 +198,10 @@
                                             <div class="prog_group">
                                                 <div class="prog_title">
                                                     <span>Bootstrap</span>
-                                                    <span>80%</span>
+                                                    <span class="parc" data-parc="60"></span>
                                                 </div>
                                                 <div class="progress">
-                                                    <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    <div class="progress-bar" role="progressbar"  aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                                                 </div>
                                             </div>
 
@@ -183,10 +209,10 @@
                                             <div class="prog_group">
                                                 <div class="prog_title">
                                                     <span>Sass</span>
-                                                    <span>70%</span>
+                                                    <span class="parc" data-parc="50"></span>
                                                 </div>
                                                 <div class="progress">
-                                                    <div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    <div class="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                                                 </div>
                                             </div>
 
@@ -195,10 +221,10 @@
                                             <div class="prog_group">
                                                 <div class="prog_title">
                                                     <span>Jquery</span>
-                                                    <span>50%</span>
+                                                    <span class="parc" data-parc="50"></span>
                                                 </div>
                                                 <div class="progress">
-                                                    <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    <div class="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                                                 </div>
                                             </div>
 
@@ -207,12 +233,14 @@
                                             <div class="prog_group">
                                                 <div class="prog_title">
                                                     <span>Figma</span>
-                                                    <span>40%</span>
+                                                    <span class="parc" data-parc="40"></span>
                                                 </div>
                                                 <div class="progress">
-                                                    <div class="progress-bar" role="progressbar" style="width: 40%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    <div class="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                                                 </div>
                                             </div>
+
+                                            
                                         </div>
                                     </div>
                                 </div>
@@ -228,80 +256,80 @@
             <div class="container px-0 px-lg-5">
                 <div class="row">
                     <div class="col text-center">
-                        <h2 class="heading" data-text="Services">what i do?</h2>
+                        <h2 class="heading tAni" data-text="Services">what i do?</h2>
                     </div>
                 </div>
 
                 <div class="row">
                     <!-- collumn 1 -->
                     <div class="col-12 col-md-6 col-lg-4">
-                        <div class="ser_box">
+                        <div class="ser_box ">
                             <div class="icon"><span class="material-symbols-outlined">empty_dashboard</span></div>
                             <div class="ser_tex">
-                                <h3 class="title">Website design and development</h3>
-                                <p class="ser_para">As a provider of website design and development services, i offer an important service to businesses and organizations looking to establish an online presence.</p>
-                                <a href="#" class="btn">Read More</a>
+                                <h3 class="title tAni">Website design and development</h3>
+                                <p class="ser_para tAni">As a provider of website design and development services, i offer an important service to businesses and organizations looking to establish an online presence.</p>
+                                <a href="#" class="btn tAni">Read More</a>
                             </div>
                         </div>
                     </div>
 
                     <!-- collumn 2 -->
                     <div class="col-12 col-md-6 col-lg-4">
-                        <div class="ser_box">
+                        <div class="ser_box ">
                             <div class="icon"><span class="material-symbols-outlined">grid_on</span></div>
                             <div class="ser_tex">
-                                <h3 class="title">Responsive web design</h3>
-                                <p class="ser_para">In today's digital world, having a website that is accessible and user-friendly on all devices is critical for businesses looking to establish an online presence. This is where responsive web design comes in.</p>
-                                <a href="#" class="btn">Read More</a>
+                                <h3 class="title tAni">Responsive web design</h3>
+                                <p class="ser_para tAni">In today's digital world, having a website that is accessible and user-friendly on all devices is critical for businesses looking to establish an online presence. This is where responsive web design comes in.</p>
+                                <a href="#" class="btn tAni">Read More</a>
                             </div>
                         </div>
                     </div>
 
                     <!-- collumn 3 -->
                     <div class="col-12 col-md-6 col-lg-4">
-                        <div class="ser_box">
+                        <div class="ser_box ">
                             <div class="icon"><span class="material-symbols-outlined">frame_source</span></div>
                             <div class="ser_tex">
-                                <h3 class="title">HTML/CSS coding and implementation</h3>
-                                <p class="ser_para"> I offer expert HTML/CSS coding and implementation services, delivering efficient, clean code that meets W3C standards. I guarantee optimal performance and user experience across all browsers and devices</p>
-                                <a href="#" class="btn">Read More</a>
+                                <h3 class="title tAni">HTML/CSS coding and implementation</h3>
+                                <p class="ser_para tAni"> I offer expert HTML/CSS coding and implementation services, delivering efficient, clean code that meets W3C standards. I guarantee optimal performance and user experience across all browsers and devices</p>
+                                <a href="#" class="btn tAni">Read More</a>
                             </div>
                         </div>
                     </div>
                     
                     <!-- collumn 4 -->
                     <div class="col-12 col-md-6 col-lg-4">
-                        <div class="ser_box">
+                        <div class="ser_box ">
                             <div class="icon"><span class="material-symbols-outlined">sauna</span></div>
                             <div class="ser_tex">
-                                <h3 class="title">Cross-browser compatibility testing and optimization</h3>
-                                <p class="ser_para">I offer high-quality cross-browser compatibility testing and optimization, ensuring seamless performance across all devices. My extensive testing and optimization process guarantees a top-notch solution for your website or application.</p>
-                                <a href="#" class="btn">Read More</a>
+                                <h3 class="title tAni">Cross-browser compatibility testing and optimization</h3>
+                                <p class="ser_para tAni">I offer high-quality cross-browser compatibility testing and optimization, ensuring seamless performance across all devices. My extensive testing and optimization process guarantees a top-notch solution for your website or application.</p>
+                                <a href="#" class="btn tAni">Read More</a>
                             </div>
                         </div>
                     </div>
 
                     <!-- collumn 5 -->
                     <div class="col-12 col-md-6 col-lg-4">
-                        <div class="ser_box">
+                        <div class="ser_box ">
                             <div class="icon"><span class="material-symbols-outlined">grass</span></div>
                             <div class="ser_tex">
-                                <h3 class="title">Interactivity and dynamic content development</h3>
-                                <p class="ser_para">I provide expert interactivity and dynamic content development services, delivering custom solutions that engage and enhance the user experience. Utilizing cutting-edge technologies, I create dynamic and interactive experiences that improve engagement and conversion rates.
+                                <h3 class="title tAni">Interactivity and dynamic content development</h3>
+                                <p class="ser_para tAni">I provide expert interactivity and dynamic content development services, delivering custom solutions that engage and enhance the user experience. Utilizing cutting-edge technologies, I create dynamic and interactive experiences that improve engagement and conversion rates.
                                 </p>
-                                <a href="#" class="btn">Read More</a>
+                                <a href="#" class="btn tAni">Read More</a>
                             </div>
                         </div>
                     </div>
 
                     <!-- collumn 1 -->
                     <div class="col-12 col-md-6 col-lg-4">
-                        <div class="ser_box">
+                        <div class="ser_box tAni">
                             <div class="icon"><span class="material-symbols-outlined">mop</span></div>
                             <div class="ser_tex">
                                 <h3 class="title">Maintenance and updates to existing websites.</h3>
                                 <p class="ser_para">I offer quality website maintenance and updates, ensuring your website runs smoothly and efficiently. With expertise in various CMS and website platforms, I provide custom solutions that meet your specific needs.</p>
-                                <a href="#" class="btn">Read More</a>
+                                <a href="#" class="btn tAni">Read More</a>
                             </div>
                         </div>
                     </div>
@@ -314,7 +342,7 @@
             <div class="container px-0 px-lg-5">
                 <div class="row">
                     <div class="col text-center">
-                        <h2 class="heading" data-text="Project one">responsive pages</h2>
+                        <h2 class="heading tAni" data-text="Project one">responsive pages</h2>
                     </div>
                 </div>
                 <div class="row">
@@ -322,13 +350,13 @@
                     <div class="col-12 col-md-6">
                         <!-- project box 1 start-->
                         <div class="proj_box">
-                            <h3 class="proj_title">Demo 1</h3>
+                            <h3 class="proj_title">Portfolio</h3>
                             <div class="demo">
                                 <div class="img_box">
                                     <img class="w-100" src="./images/portfolio2.png" alt="image">
                                 </div>
                             </div>
-                            <a href="https://anamaadel.github.io/final-project/" target="_blank" class="btn">Live preview</a>
+                            <a href="./responsive/final-project/" target="_blank" class="btn">Live preview</a>
                         </div>
                         <!-- project box 1 end-->
                        
@@ -337,13 +365,13 @@
                     <!------------  Demo 2  start----------->
                     <div class="col-12 col-md-6">
                          <div class="proj_box">
-                            <h3 class="proj_title">Demo 2</h3>
-                            <div class="demo">
+                            <h3 class="proj_title">Kidsure</h3>
+                            <div class="demo tAni">
                                 <div class="img_box">
                                     <img class="w-100" src="./images/kidsure.png" alt="image">
                                 </div>
                             </div>
-                            <a href="https://anamaadel.github.io/kidsure/" target="_blank"  class="btn">Live preview</a>
+                            <a href="./responsive/kidsure/" target="_blank"  class="btn">Live preview</a>
                         </div>
                        
                     </div>
@@ -351,13 +379,13 @@
                     <!------------  Demo 3  start----------->
                     <div class="col-12 col-md-6">
                          <div class="proj_box">
-                            <h3 class="proj_title">Demo 3</h3>
+                            <h3 class="proj_title">Hunt</h3>
                             <div class="demo">
                                 <div class="img_box">
                                     <img class="w-100" src="./images/hunt.png" alt="image">
                                 </div>
                             </div>
-                            <a href="https://anamaadel.github.io/Hunt-html-template/" target="_blank"  class="btn">Live preview</a>
+                            <a href="./responsive/hunt/" target="_blank"  class="btn">Live preview</a>
                         </div>
                        
                     </div>
@@ -366,13 +394,13 @@
                     <!------------  Demo 4  start----------->
                     <div class="col-12 col-md-6">
                          <div class="proj_box">
-                            <h3 class="proj_title">Demo 4</h3>
-                            <div class="demo">
+                            <h3 class="proj_title">Resturant</h3>
+                            <div class="demo tAni">
                                 <div class="img_box">
                                     <img class="w-100" src="./images/resturent1.png" alt="image">
                                 </div>
                             </div>
-                            <a href="https://anamaadel.github.io/resturent1/" target="_blank"  class="btn">Live preview</a>
+                            <a href="./responsive/resturent/" target="_blank"  class="btn">Live preview</a>
                         </div>
                        
                     </div>
@@ -381,13 +409,13 @@
                     <!------------  Demo 5  start----------->
                     <div class="col-12 col-md-6">
                          <div class="proj_box">
-                            <h3 class="proj_title">Demo 5</h3>
+                            <h3 class="proj_title">Lambda</h3>
                             <div class="demo">
                                 <div class="img_box">
                                     <img class="w-100" src="./images/resturent2.png" alt="image">
                                 </div>
                             </div>
-                            <a href="https://anamaadel.github.io/resturent2/" target="_blank"  class="btn">Live preview</a>
+                            <a href="./responsive/restaurant2/" target="_blank"  class="btn">Live preview</a>
                         </div>
                        
                     </div>
@@ -396,17 +424,45 @@
                     <!------------  Demo 6  start----------->
                     <div class="col-12 col-md-6">
                          <div class="proj_box">
-                            <h3 class="proj_title">Demo 6</h3>
-                            <div class="demo">
+                            <h3 class="proj_title">Adachi</h3>
+                            <div class="demo tAni">
                                 <div class="img_box">
-                                    <img class="w-100" src="./images/indonesian.png" alt="image">
+                                    <img class="w-100" src="./images/adachi.png" alt="image">
                                 </div>
                             </div>
-                            <a href="https://anamaadel.github.io/indonesian-cuisine/" target="_blank"  class="btn">Live preview</a>
+                            <a href="./responsive/adchi/" target="_blank"  class="btn">Live preview</a>
                         </div>
                        
                     </div>
                     <!------------ Demo 6 end----------->
+                    <!------------  Demo 7  start----------->
+                    <div class="col-12 col-md-6">
+                         <div class="proj_box">
+                            <h3 class="proj_title">Indonesian Cuisine</h3>
+                            <div class="demo tAni">
+                                <div class="img_box">
+                                    <img class="w-100" src="./images/indonesian.png" alt="image">
+                                </div>
+                            </div>
+                            <a href="./responsive/indonesian-cuisine/" target="_blank"  class="btn">Live preview</a>
+                        </div>
+                       
+                    </div>
+                    <!------------ Demo 7 end----------->
+                    <!------------  Demo 8  start----------->
+                    <div class="col-12 col-md-6">
+                         <div class="proj_box">
+                            <h3 class="proj_title">Simple Page</h3>
+                            <div class="demo tAni">
+                                <div class="img_box">
+                                    <img class="w-100" src="./images/siam.png" alt="image">
+                                </div>
+                            </div>
+                            <a href="./responsive/S_final-project/" target="_blank"  class="btn">Live preview</a>
+                        </div>
+                       
+                    </div>
+                    <!------------ Demo 8 end----------->
                 </div>
             </div>
         </section>
@@ -424,7 +480,7 @@
                     <div class="col-12 col-md-6">
                         <!-- project box 1 start-->
                         <div class="proj_box">
-                            <h3 class="proj_title">Demo 1</h3>
+                            <h3 class="proj_title">CIT Dashboard</h3>
                             <div class="demo">
                                 <div class="img_box">
                                     <img class="w-100" src="./images/cit.png" alt="image">
@@ -442,13 +498,13 @@
                     <!------------  Demo 2  start----------->
                     <div class="col-12 col-md-6">
                          <div class="proj_box">
-                            <h3 class="proj_title">Demo 2</h3>
-                            <div class="demo">
+                            <h3 class="proj_title">Hike</h3>
+                            <div class="demo tAni">
                                 <div class="img_box">
                                     <img class="w-100" src="./images/hike.png" alt="image">
                                 </div>
                             </div>
-                            <a href="https://anamaadel.github.io/hiking/" target="_blank"  class="btn">Live preview</a>
+                            <a href="./non-responsive/hiking/" target="_blank"  class="btn">Live preview</a>
                         </div>
                        
                     </div>
@@ -456,13 +512,13 @@
                     <!------------  Demo 3  start----------->
                     <div class="col-12 col-md-6">
                          <div class="proj_box">
-                            <h3 class="proj_title">Demo 3</h3>
+                            <h3 class="proj_title">My Home</h3>
                             <div class="demo">
                                 <div class="img_box">
                                     <img class="w-100" src="./images/myhome.png" alt="image">
                                 </div>
                             </div>
-                            <a href=" https://anamaadel.github.io/myhome/" target="_blank"  class="btn">Live preview</a>
+                            <a href="./non-responsive/myHome/" target="_blank"  class="btn">Live preview</a>
                         </div>
                        
                     </div>
@@ -471,62 +527,374 @@
                     <!------------  Demo 4  start----------->
                     <div class="col-12 col-md-6">
                          <div class="proj_box">
-                            <h3 class="proj_title">Demo 4</h3>
-                            <div class="demo">
+                            <h3 class="proj_title">Burger Hut</h3>
+                            <div class="demo tAni">
                                 <div class="img_box">
                                     <img class="w-100" src="./images/burger.png" alt="image">
                                 </div>
                             </div>
-                            <a href="https://anamaadel.github.io/burger-resturent/" target="_blank"  class="btn">Live preview</a>
+                            <a href="./non-responsive/burger/" target="_blank"  class="btn">Live preview</a>
+                        </div>
+                       
+                    </div>
+                    <!------------ Demo 4 end----------->
+
+                </div>
+            </div>
+        </section>
+        <!--*********======****** project tow end *********======******-->
+        <!--*********======****** project three start *********======******-->
+        <section id="jsProject" class="main_wraper">
+            <div class="container px-0 px-lg-5">
+                <div class="row">
+                    <div class="col text-center">
+                        <h2 class="heading" data-text="Project three">JavaScript Project</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <!------------  Demo 1  start----------->
+                    <div class="col-12 col-md-6">
+                        <!-- project box 1 start-->
+                        <div class="proj_box">
+                            <h3 class="proj_title">Earth</h3>
+                            <div class="demo">
+                                <div class="img_box">
+                                    <img class="w-100" src="./images/earth.png" alt="image">
+                                </div>
+                            </div>
+                            <a href="./myjsProject/earth/index.html" target="_blank"  class="btn">Live preview</a>
+                        </div>
+                        <!-- project box 1 end-->
+                       
+                    </div>
+                    <!------------  Demo 1 end----------->
+                    <!------------  Demo 2  start----------->
+                    <div class="col-12 col-md-6">
+                         <div class="proj_box">
+                            <h3 class="proj_title">Magnifying Image</h3>
+                            <div class="demo tAni">
+                                <div class="img_box">
+                                    <img class="w-100" src="./images/zoopImage.png" alt="image">
+                                </div>
+                            </div>
+                            <a href="./myjsProject/image-zoom/" target="_blank"  class="btn">Live preview</a>
+                        </div>
+                       
+                    </div>
+                    <!------------ Demo 2 end----------->
+                    <!------------  Demo 3  start----------->
+                    <div class="col-12 col-md-6">
+                         <div class="proj_box">
+                            <h3 class="proj_title">Color Planet</h3>
+                            <div class="demo">
+                                <div class="img_box">
+                                    <img class="w-100" src="./images/color-box.png" alt="image">
+                                </div>
+                            </div>
+                            <a href="./myjsProject/colors-palet/index.html" target="_blank"  class="btn">Live preview</a>
+                        </div>
+                       
+                    </div>
+                    <!------------ Demo 3 end----------->
+
+                    <!------------  Demo 4  start----------->
+                    <div class="col-12 col-md-6">
+                         <div class="proj_box">
+                            <h3 class="proj_title">5 Stars</h3>
+                            <div class="demo tAni">
+                                <div class="img_box">
+                                    <img class="w-100" src="./images/5stars.png" alt="image">
+                                </div>
+                            </div>
+                            <a href="./myjsProject/5start/index.html" target="_blank"  class="btn">Live preview</a>
                         </div>
                        
                     </div>
                     <!------------ Demo 4 end----------->
 
                     <!------------  Demo 5  start----------->
-                    <!-- <div class="col-12 col-md-6">
+                    <div class="col-12 col-md-6">
                          <div class="proj_box">
-                            <h3 class="proj_title">Demo 5</h3>
-                            <div class="demo">
+                            <h3 class="proj_title">Scroll Navigation</h3>
+                            <div class="demo tAni">
                                 <div class="img_box">
-                                    <img class="w-100" src="./images/resturent2.png" alt="image">
+                                    <img class="w-100" src="./images/scroll-nav.png" alt="image">
                                 </div>
                             </div>
-                            <a href="#" class="btn">Live preview</a>
+                            <a href="./myjsProject/dragble-slider/" target="_blank"  class="btn">Live preview</a>
                         </div>
                        
-                    </div> -->
+                    </div>
                     <!------------ Demo 5 end----------->
-
                     <!------------  Demo 6  start----------->
-                    <!-- <div class="col-12 col-md-6">
+                    <div class="col-12 col-md-6">
                          <div class="proj_box">
-                            <h3 class="proj_title">Demo 6</h3>
-                            <div class="demo">
+                            <h3 class="proj_title">Drag & Drop</h3>
+                            <div class="demo tAni">
                                 <div class="img_box">
-                                    <img class="w-100" src="./images/indonesian.png" alt="image">
+                                    <img class="w-100" src="./images/drag-drop.png" alt="image">
                                 </div>
                             </div>
-                            <a href="#" class="btn">Live preview</a>
+                            <a href="./myjsProject/drag-&-drop/" target="_blank"  class="btn">Live preview</a>
                         </div>
                        
-                    </div> -->
+                    </div>
                     <!------------ Demo 6 end----------->
+                    <!------------  Demo 7  start----------->
+                    <div class="col-12 col-md-6">
+                         <div class="proj_box">
+                            <h3 class="proj_title">Make Button Gredient</h3>
+                            <div class="demo tAni">
+                                <div class="img_box">
+                                    <img class="w-100" src="./images/gredientbtn.png" alt="image">
+                                </div>
+                            </div>
+                            <a href="./myjsProject/gradient/" target="_blank"  class="btn">Live preview</a>
+                        </div>
+                       
+                    </div>
+                    <!------------ Demo 7 end----------->
+                    <!------------  Demo 8  start----------->
+                    <div class="col-12 col-md-6">
+                         <div class="proj_box">
+                            <h3 class="proj_title">Gradient Genarator</h3>
+                            <div class="demo tAni">
+                                <div class="img_box">
+                                    <img class="w-100" src="./images/gradient-gen.png" alt="image">
+                                </div>
+                            </div>
+                            <a href="./myjsProject/gradient-genarator/" target="_blank"  class="btn">Live preview</a>
+                        </div>
+                       
+                    </div>
+                    <!------------ Demo 8 end----------->
+                    <!------------  Demo 9  start----------->
+                    <div class="col-12 col-md-6">
+                         <div class="proj_box">
+                            <h3 class="proj_title">Indicate Buttons</h3>
+                            <div class="demo tAni">
+                                <div class="img_box">
+                                    <img class="w-100" src="./images/item-indicator.png" alt="image">
+                                </div>
+                            </div>
+                            <a href="./myjsProject/menu-hover-effect/" target="_blank"  class="btn">Live preview</a>
+                        </div>
+                       
+                    </div>
+                    <!------------ Demo 9 end----------->
+                    <!------------  Demo 10  start----------->
+                    <div class="col-12 col-md-6">
+                         <div class="proj_box">
+                            <h3 class="proj_title">Dragable Item</h3>
+                            <div class="demo tAni">
+                                <div class="img_box">
+                                    <img class="w-100" src="./images/dragable-item.png" alt="image">
+                                </div>
+                            </div>
+                            <a href="./myjsProject/menu-item-dragable/" target="_blank"  class="btn">Live preview</a>
+                        </div>
+                       
+                    </div>
+                    <!------------ Demo 10 end----------->
+                    <!------------  Demo 11  start----------->
+                    <div class="col-12 col-md-6">
+                         <div class="proj_box">
+                            <h3 class="proj_title">Scalable Item</h3>
+                            <div class="demo tAni">
+                                <div class="img_box">
+                                    <img class="w-100" src="./images/scalable-item.png" alt="image">
+                                </div>
+                            </div>
+                            <a href="./myjsProject/menu-item-scalable/" target="_blank"  class="btn">Live preview</a>
+                        </div>
+                       
+                    </div>
+                    <!------------ Demo 11 end----------->
+                    <!------------  Demo 12  start----------->
+                    <div class="col-12 col-md-6">
+                         <div class="proj_box">
+                            <h3 class="proj_title">Passing Fruits Through Stack</h3>
+                            <div class="demo tAni">
+                                <div class="img_box">
+                                    <img class="w-100" src="./images/image-change.png" alt="image">
+                                </div>
+                            </div>
+                            <a href="./myjsProject/passing-item-through-stack/" target="_blank"  class="btn">Live preview</a>
+                        </div>
+                       
+                    </div>
+                    <!------------ Demo 12 end----------->
+                    <!------------  Demo 13  start----------->
+                    <div class="col-12 col-md-6">
+                         <div class="proj_box">
+                            <h3 class="proj_title">Sound Player</h3>
+                            <div class="demo tAni">
+                                <div class="img_box">
+                                    <img class="w-100" src="./images/player.png" alt="image">
+                                </div>
+                            </div>
+                            <a href="./myjsProject/player/" target="_blank"  class="btn">Live preview</a>
+                        </div>
+                       
+                    </div>
+                    <!------------ Demo 13 end----------->
+                    <!------------  Demo 14  start----------->
+                    <div class="col-12 col-md-6">
+                         <div class="proj_box">
+                            <h3 class="proj_title">Increament & Dicreament</h3>
+                            <div class="demo tAni">
+                                <div class="img_box">
+                                    <img class="w-100" src="./images/inc-dinc.png" alt="image">
+                                </div>
+                            </div>
+                            <a href="./myjsProject/increament-&-dicreament/" target="_blank"  class="btn">Live preview</a>
+                        </div>
+                       
+                    </div>
+                    <!------------ Demo 14 end----------->
                 </div>
             </div>
         </section>
-        <!--*********======****** project tow end *********======******-->
+        <!--*********======****** project three end *********======******-->
+        <!--*********======****** project four start *********======******-->
+        <section id="gsap" class="main_wraper">
+            <div class="container px-0 px-lg-5">
+                <div class="row">
+                    <div class="col text-center">
+                        <h2 class="heading" data-text="Project three">Gsap Project</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <!------------  Demo 1  start----------->
+                    <div class="col-12 col-md-6">
+                        <!-- project box 1 start-->
+                        <div class="proj_box">
+                            <h3 class="proj_title">Image Gallery</h3>
+                            <div class="demo">
+                                <div class="img_box">
+                                    <img class="w-100" src="./images/galary.png" alt="image">
+                                </div>
+                            </div>
+                            <a href="./gsap/image-gallary-using-flip/" target="_blank"  class="btn">Live preview</a>
+                        </div>
+                        <!-- project box 1 end-->
+                       
+                    </div>
+                    <!------------  Demo 1 end----------->
+                    <!------------  Demo 2  start----------->
+                    <div class="col-12 col-md-6">
+                        <!-- project box 1 start-->
+                        <div class="proj_box">
+                            <h3 class="proj_title">Horizontal Image Gallery</h3>
+                            <div class="demo">
+                                <div class="img_box">
+                                    <img class="w-100" src="./images/horizontal-galary.png" alt="image">
+                                </div>
+                            </div>
+                            <a href="./gsap/image-gallary-using-flip-2/" target="_blank"  class="btn">Live preview</a>
+                        </div>
+                        <!-- project box 1 end-->
+                       
+                    </div>
+                    <!------------  Demo 2 end----------->
+                    <!------------  Demo 3  start----------->
+                    <div class="col-12 col-md-6">
+                        <!-- project box 1 start-->
+                        <div class="proj_box">
+                            <h3 class="proj_title">Image Gallery Page</h3>
+                            <div class="demo">
+                                <div class="img_box">
+                                    <img class="w-100" src="./images/gallary-page.png" alt="image">
+                                </div>
+                            </div>
+                            <a href="./gsap/image-gallary-using-flip-3/" target="_blank"  class="btn">Live preview</a>
+                        </div>
+                        <!-- project box 1 end-->
+                       
+                    </div>
+                    <!------------  Demo 3 end----------->
+                    <!------------  Demo 4  start----------->
+                    <div class="col-12 col-md-6">
+                        <!-- project box 1 start-->
+                        <div class="proj_box">
+                            <h3 class="proj_title">Scroll Effect</h3>
+                            <div class="demo">
+                                <div class="img_box">
+                                    <img class="w-100" src="./images/scrollEffect.png" alt="image">
+                                </div>
+                            </div>
+                            <a href="./gsap/scroll-image/" target="_blank"  class="btn">Live preview</a>
+                        </div>
+                        <!-- project box 1 end-->
+                       
+                    </div>
+                    <!------------  Demo 4 end----------->
+                    <!------------  Demo 5  start----------->
+                    <div class="col-12 col-md-6">
+                        <!-- project box 1 start-->
+                        <div class="proj_box">
+                            <h3 class="proj_title">Scroll Effect 2</h3>
+                            <div class="demo">
+                                <div class="img_box">
+                                    <img class="w-100" src="./images/scrollEffect.png" alt="image">
+                                </div>
+                            </div>
+                            <a href="./gsap/scroll-image2/" target="_blank"  class="btn">Live preview</a>
+                        </div>
+                        <!-- project box 1 end-->
+                       
+                    </div>
+                    <!------------  Demo 5 end----------->
+                    <!------------  Demo 6  start----------->
+                    <div class="col-12 col-md-6">
+                        <!-- project box 1 start-->
+                        <div class="proj_box">
+                            <h3 class="proj_title">Scroll Image Gallery</h3>
+                            <div class="demo">
+                                <div class="img_box">
+                                    <img class="w-100" src="./images/scroll-galary.png" alt="image">
+                                </div>
+                            </div>
+                            <a href="./gsap/scroll-image3/" target="_blank"  class="btn">Live preview</a>
+                        </div>
+                        <!-- project box 1 end-->
+                       
+                    </div>
+                    <!------------  Demo 6 end----------->
+                    <!------------  Demo 7  start----------->
+                    <div class="col-12 col-md-6">
+                        <!-- project box 1 start-->
+                        <div class="proj_box">
+                            <h3 class="proj_title">Verticle Image Gallery</h3>
+                            <div class="demo">
+                                <div class="img_box">
+                                    <img class="w-100" src="./images/verticle-galary.png" alt="image">
+                                </div>
+                            </div>
+                            <a href="./gsap/scroll-image4/" target="_blank"  class="btn">Live preview</a>
+                        </div>
+                        <!-- project box 1 end-->
+                       
+                    </div>
+                    <!------------  Demo 7 end----------->
+                </div>
+            </div>
+        </section>
+        <!--*********======****** project four end *********======******-->
 
         <noscript>You need to enable JavaScript to run this app.</noscript>
 
     <!-- bootstrap js link -->
-    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.min.js"></script>
     <!-- jquery link -->
-    <script src="./js/jquery3.6.2.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.2/jquery.min.js"></script>
 
     <!-- typing js link -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/TypewriterJS/2.19.0/core.min.js" integrity="sha512-t4NGjfaRaGCjmiTGBsiG3w8FCp8ZY7dPlwZAXfeoGPARUT/rt3OP0NpQkblSgZy/2R8vPTXiEcq/zcWIJ8NusQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- gsap cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
     <!-- custom js link -->
-    <script src="./js/main.js"></script>
+    <script src="./js/script.js" defer></script>
 </body>
 </html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag & Drop</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            /* box-sizing: border-box; */
+        }
+        body{
+            min-height: 100vh;
+            background: #d4d4d4;
+            display: flex;
+            gap: 1rem;
+
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            background: #61db8a;
+            border: 3px solid #fff;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-size: 2rem;
+        }
+        .box.active{
+            /* transform: translate(-50%,-50%); */
+            position: absolute;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+
+
+    <script>
+        const box = document.querySelectorAll(".box");
+
+        let isDraging = false , layer = 0;
+
+
+        
+        box.forEach(box =>{
+            box.addEventListener("mousedown",(elem)=>{
+                layer++
+                console.log(elem.offsetX);
+                isDraging = false
+                box.classList.add("active");
+                box.classList.add("dragging");
+                box.style.zIndex = layer;
+
+                window.addEventListener('mousemove',(e)=>{
+                    let x = e.clientX - elem.offsetX;
+                    let y = e.clientY -elem.offsetY;
+                    const dragingBx = document.querySelector(".box.dragging");
+                    if(!isDraging){
+                        dragingBx.style.left = x +'px';
+                        dragingBx.style.top = y+"px";
+                            // box.style.transform = `translate(-${elem.offsetX}px,-${elem.offsetY}px)`;
+                            
+                        }
+                    })
+                    // box.classList.add("active");
+                    
+                });
+                box.addEventListener("mouseup",()=>{
+                    isDraging = true;
+                    box.classList.remove("dragging");
+                });
+        })
+    </script>
+</body>
+</html>

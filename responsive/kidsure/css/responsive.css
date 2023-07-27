@@ -1,0 +1,86 @@
+@media screen and (min-width: 1200px){
+    .container, .container-lg, .container-md, .container-sm, .container-xl {
+        max-width: 1175px;
+    }
+}
+@media screen and (max-width: 1200px){
+    #testimonial .test_box{
+        background: url(../images/test_bgPink.png) no-repeat;
+        background-size: contain;
+    }
+    #testimonial .test_box.second{
+        background: url(../images/test_bg2green.png) no-repeat;
+        background-size: contain;
+    }
+    #testimonial .test_box .test_com{
+        font-size: 14px;
+    }
+    
+    #testimonial .button_prev{
+        top: 105%;
+        left: 30%;
+    }
+    #testimonial .button_next{
+        right: 30%;
+        top: 105%;
+    }
+}
+@media screen and (max-width: 992px){
+    #testimonial .test_box{
+        background: var(--pink);
+    }
+    #testimonial .test_box.second{
+        background: var(--greenPearl);
+    }
+    .navbar .navbar-collapse .contact_link{
+        display: none;
+    }
+}
+@media screen and (max-width: 772px){
+    .head_title::after,.head_title::before{
+        width: 35px;
+    }
+    #total .newsletter{
+        padding: 30px;
+    }
+    .navbar .navbar-brand{
+        width: 150px;
+    }
+
+}
+@media screen and (max-width: 400px){
+
+    .head_title{
+        padding: 0 20px;
+    }
+    .head_title::after,.head_title::before{
+        display: none;
+    }
+    #banner .banner_text .bann_title{
+        font-size: 40px;
+    }
+    #about .about_text .ab_title,#services .service_text .serv_title,#total .newsletter .news_box .news_title,#total .total_box .counter,#total .total_box .count_title{
+        font-size: 30px;
+    }
+    #services .service_text .serv_btn{
+        margin-top: 40px;
+        font-size: 15px;
+    }
+    #total .newsletter{
+        padding: 30px 0;
+    }
+    #total .newsletter .logForm input{
+        width: 90%;
+    }
+    #testimonial .test_box{
+        padding: 80px;
+    }
+    #testimonial .button_prev,#testimonial .button_next{
+        width: 30px;
+        /* font-size: ; */
+    }
+    footer .social{
+        padding: 0;
+        justify-content: center;
+    }
+}

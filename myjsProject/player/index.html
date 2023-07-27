@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>music player</title>
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <h2 class="title">news-1</h2>
+        <div class="music-img">
+            <img class="img" src="./images/home.jpg" alt="home">
+        </div>
+        <audio class="sound" src="./music/Al-Falaq.mp3"></audio>
+        <div class="progress-container">
+            <div class="progress-time">
+                <span id="current-time">1.00</span>
+                <span id="duration-time">2.00</span>
+            </div>
+            <div id="progress-bar">
+                <div id="progress"></div>
+            </div>
+        </div>
+        <div class="music-box">
+            <i class="fa-solid fa-backward-fast" id="prev"></i>
+            <i class="fa-solid fa-play" id="play"></i>
+            <i class="fa-solid fa-forward" id="next"></i>
+        </div>
+    </div>
+
+    <script>
+        const title = document.querySelector('.title');
+        const img = document.querySelector('.img');
+        const prev = document.querySelector('#prev');
+        const play = document.querySelector('#play');
+        const next = document.querySelector('#next');
+        const sound = document.querySelector('.sound');
+
+        const current_time = document.getElementById('current-time');
+        const duration_time = document.getElementById('duration-time');
+        const progress_bar = document.getElementById('progress-bar');
+        const progress = document.getElementById('progress');
+
+
+        let objSound = [
+        {
+            title:'Al-Falaq',
+            path: 'Al-Falaq',
+            img: 'home'
+        },
+        {
+            title:'Al-Fatihah',
+            path: 'Al-Fatihah',
+            img: 'home'
+        },
+        {
+            title: 'Al-Ikhlas',
+            path: 'Al-Ikhlas',
+            img: 'neture'
+        },
+        {
+            title: 'Al-Kafirun',
+            path: 'Al-Kafirun',
+            img: 'painting'
+        },
+        {
+            title: 'An-Nas',
+            path: 'An-Nas',
+            img: 'trees'
+        },
+        {
+            title: 'An-Nasr',
+            path: 'An-Nasr',
+            img: 'window'
+        }
+    ]
+
+        let isplaying = false; 
+
+        
+
+        function playSound(){
+            isplaying = true;
+            sound.play();
+            play.classList.replace('fa-play','fa-pause');
+        }
+        function pauseSound(){
+            isplaying = false;
+            sound.pause();
+            play.classList.replace('fa-pause','fa-play');
+        }
+
+        play.addEventListener('click',function(){
+            // if(isplaying){
+            //     pauseSound();
+            // }else{
+            //     playSound()
+            // }
+
+            isplaying ? pauseSound() : playSound();
+        })
+
+        
+        function change(objSound){
+            title.innerText = objSound.title;
+            sound.src = './music/'+ objSound.path+'.mp3';
+            img.src = './images/'+ objSound.img+'.jpg';
+            
+        }
+        
+        let index = 0;
+        const nextSound = ()=>{
+            index = (index + 1)% objSound.length;
+            change(objSound[index]);
+            playSound();
+        }
+        const prevSound = ()=>{
+            index = (index - 1 + objSound.length)%objSound.length;
+            change(objSound[index]);
+            playSound();
+        }
+
+        sound.addEventListener('timeupdate',(event)=>{
+            // console.log(event);
+            const {currentTime,duration} = event.srcElement;
+            progress.style.width = (currentTime/duration)*100+'%';
+            // let curTime = event.srcElement.currentTime;
+            // let durationTime = event.srcElement.duration;
+            let curSecond = Math.floor(currentTime % 60);
+            let curMinutes = Math.floor(currentTime / 60);
+            if(curSecond < 10){
+                curSecond = `0${curSecond}`;
+                console.log(curSecond);
+                
+            }
+            let tut_curTime = `${curMinutes}:${curSecond}`;
+            current_time.textContent = `${tut_curTime}`;
+            
+            
+            let durSecond = Math.floor(duration%60);
+            let durMinutes = Math.floor(duration/60);
+            let tut_durTime = `${durMinutes}:${durSecond}`;
+            if(duration){
+                // durSecend = `0${durSecend}`;
+                // console.log(durSecend);
+
+                duration_time.textContent = `${tut_durTime}`;
+            }
+
+            // if(event.currentTime<10){
+            //     current_time.textContent = `0 ${Math.floor(event.srcElement.currentTime%60)}`;
+            // }
+            
+            // duration_time.textContent = `${Math.floor(durationTime/60)}.${Math.floor(durationTime%60)}`;
+
+            // progress.style.width = 30+'px';
+            // progress.style.width = (curTime/durationTime)*100+'%';
+
+            
+            
+        })
+        progress_bar.addEventListener('click',(value)=>{
+
+            const {duration} = sound;
+            let current_progress = (value.offsetX/value.srcElement.clientWidth)*duration;
+            console.log(current_progress);
+
+            sound.currentTime = current_progress;
+
+        })
+
+
+        sound.addEventListener('ended',nextSound);
+        next.addEventListener('click',nextSound);
+        prev.addEventListener('click',prevSound);
+        </script>
+</body>
+</html>

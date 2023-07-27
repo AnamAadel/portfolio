@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>increament & dicreament</title>
+    <style>
+        body{
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #dbecd0;
+            flex-direction: column;
+        }
+        .container{
+            padding: 1rem;
+            background: #fff;
+            display: flex;
+        }
+        button,.num{
+            padding: .5rem 1rem;
+            border: none;
+            font-size: 1.6rem;
+            font-weight: bolder;
+            user-select: none;
+            
+        }
+        button{
+            background: #4df1c8;
+        }
+        button.disable{
+            opacity: .5;
+            pointer-events: none;
+            
+        }
+    </style>
+</head>
+<body>
+    <h2>Increament & Dicreament</h2>
+    <div class="container">
+        <button class="dinc disable"> - </button>
+        <span class="num">0</span>
+        <button class="inc">+ </button>
+    </div>
+
+
+    <script>
+        const button = document.querySelectorAll('button'),
+        num = document.querySelector('.num');
+
+        let numCount = 0;
+
+        button.forEach((btn)=>{
+            btn.addEventListener("click",()=>{
+                btn.className === 'dinc'? numCount-- : numCount++;
+
+                button[0].classList[`${numCount === 0 ? "add": "remove"}`]("disable");
+                num.innerText = numCount;
+            });
+        })
+    </script>
+</body>
+</html>

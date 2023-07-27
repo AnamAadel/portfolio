@@ -1,0 +1,9 @@
+header.prog_head{
+    background: url(../images/progHeadingImg.png) no-repeat center;
+    background-size: cover;
+    
+}
+header.prog_head .breadcrumb-item{
+    color: #fff;
+    
+}

@@ -1,0 +1,581 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 0.8;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+.text_anim {
+  display: inline-block;
+  transform-origin: center;
+  transform-style: preserve-3d;
+}
+
+/*################### header start*****************/
+header {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  width: 100%;
+  padding-bottom: 1.3rem;
+  background: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  color: #ebdfd4;
+  z-index: 99999;
+  transition: all linear 0.3s;
+}
+header.sticky {
+  background: #091b1e;
+  padding-bottom: 0rem;
+}
+header.sticky.sticky .logo {
+  width: 4.2rem;
+  margin-top: 0;
+  transition: all linear 0.3s;
+}
+header .menu_icon {
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 2rem 0 0;
+  border: 1px solid #ebdfd4;
+  border-left: none;
+  border-top: none;
+  gap: 0.2rem;
+}
+header .menu_icon span {
+  width: 1.1rem;
+  height: 0.4px;
+  background: #ebdfd4;
+  display: inline-block;
+  transition: all linear 0.3s;
+  transform-origin: left;
+}
+header .menu_icon.display {
+  gap: 0.4rem;
+}
+header .menu_icon.display .top {
+  transform: rotate(45deg);
+}
+header .menu_icon.display .bottom {
+  transform: rotate(-45deg);
+}
+header .menu_icon.display .center {
+  opacity: 0;
+  transform: translateY(10px);
+}
+header .logo {
+  width: 8rem;
+  margin-right: auto;
+  transition: all linear 0.3s;
+}
+header .logo img {
+  width: 100%;
+  margin-top: 0.8rem;
+}
+header .header_btn {
+  width: 26rem;
+  height: 3rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: start;
+  border: 1px solid #ebdfd4;
+  border-top: none;
+  border-right: none;
+  color: #ebdfd4;
+}
+header .header_btn .btn {
+  text-transform: capitalize;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  font-size: 0.8rem;
+  border-right: 1px solid #ebdfd4;
+  width: 33.3333333333%;
+  text-align: center;
+  line-height: 3rem;
+  transition: all linear 0.3s;
+}
+header .header_btn .btn:hover {
+  background: #ebdfd4;
+  color: #000;
+}
+
+/*################### header end*****************/
+/*################### home start &&&&&&&&&&&&&&&&&&&*/
+.menu_box {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 100%;
+  background: url(../images/footer-bg.jpg) no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  padding: 5rem;
+  transition: all linear 1s;
+  z-index: 99;
+  color: #ebdfd4;
+  opacity: 0;
+  overflow-y: auto;
+}
+.menu_box.display {
+  right: 0%;
+  opacity: 1;
+}
+.menu_box li a {
+  display: block;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  font-size: 1.9rem;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
+}
+.menu_box .social_links {
+  font-size: 2.2rem;
+}
+.menu_box .order_box .btn {
+  display: block;
+  text-align: center;
+  margin-bottom: 0.8rem;
+  width: 16rem;
+  padding: 0.8rem 0;
+  border: 1px solid transparent;
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  background: #ebdfd4;
+  color: #000;
+  transition: all linear 0.3s;
+}
+.menu_box .order_box .btn:hover {
+  background: transparent;
+  color: #ebdfd4;
+  border-color: #ebdfd4;
+}
+
+#home {
+  width: 100%;
+  height: 73rem;
+  position: relative;
+  z-index: 1;
+  padding: 9rem 6rem;
+  color: #ebdfd4;
+}
+#home .hero_imag {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+#home .hero_imag img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#home .side_left {
+  width: 3rem;
+  height: 115vh;
+  color: #ebdfd4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-right: 1px solid #ebdfd4;
+  text-transform: uppercase;
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  font-size: 0.8rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#home .side_left .brand_text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: auto;
+  margin-bottom: auto;
+  gap: 0.1rem;
+}
+#home .social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 1.3rem;
+}
+#home .social a {
+  font-size: 1.5rem;
+}
+#home .hero_para {
+  font-family: "Playfair Display", serif;
+  font-weight: 300;
+  font-size: 2.5vw;
+  text-transform: uppercase;
+}
+#home .main_text {
+  font-family: "Playfair Display", serif;
+  font-weight: 300;
+  font-size: 8vw;
+  text-transform: capitalize;
+}
+
+/*################### home end &&&&&&&&&&&&&&&&&&&*/
+/*################### missing start &&&&&&&&&&&&&&&&&&&*/
+#mission {
+  width: 90%;
+  background: url(../images/footer-bg.jpg);
+  color: #ebdfd4;
+  padding: 10rem 5vw 22rem;
+  position: relative;
+  margin-top: -28.1rem;
+  z-index: 1;
+}
+#mission .mis_box {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+}
+#mission h2 {
+  font-family: "Playfair Display", serif;
+  font-weight: 100;
+  font-size: 4vw;
+  text-transform: capitalize;
+}
+#mission .miss_para {
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 6.6rem;
+  margin-top: 3rem;
+  margin-left: auto;
+  margin-right: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 0.8rem;
+}
+#mission .miss_para p {
+  width: 25rem;
+  line-height: 1.3rem;
+}
+#mission .misBtn {
+  margin-left: auto;
+  font-family: "Playfair Display", serif;
+  font-weight: 300;
+  font-size: 1.2rem;
+  margin-top: 1.6rem;
+  position: relative;
+}
+#mission .misBtn::after {
+  content: "";
+  width: 0%;
+  height: 0.1rem;
+  position: absolute;
+  left: 0;
+  bottom: -0.2rem;
+  background: #ebdfd4;
+  transition: all linear 0.3s;
+}
+#mission .misBtn:hover::after {
+  width: 100%;
+}
+#mission .pic_scaled {
+  width: 85%;
+  position: absolute;
+  bottom: -20%;
+  right: 0;
+}
+
+/*################### missing end &&&&&&&&&&&&&&&&&&&*/
+/*################### components start &&&&&&&&&&&&&&&&&&&*/
+#components {
+  width: 100%;
+  height: 75rem;
+  padding: 9rem 7rem;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+#components h2 {
+  font-family: "Playfair Display", serif;
+  font-weight: 300;
+  font-size: 9vw;
+  color: #ebdfd4;
+}
+#components .comp_bg {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+#components .comp_bg img {
+  width: 28vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#components .comp_bg img[alt=home-pic-1] {
+  top: 0rem;
+  left: calc(100% - 30vw);
+}
+#components .comp_bg img[alt=home-pic-2] {
+  top: 25rem;
+  left: 0;
+}
+#components .comp_bg img[alt=home-pic-3] {
+  top: 37rem;
+  left: 22vw;
+}
+#components .comp_bg img[alt=home-pic-4] {
+  top: 42rem;
+  left: calc(100% - 30vw);
+}
+#components .comp_bg img[alt=home-pic-5] {
+  top: 27rem;
+  left: calc(100% - 45vw);
+  width: 32vw;
+}
+
+/*################### components end &&&&&&&&&&&&&&&&&&&*/
+/*################### menu start &&&&&&&&&&&&&&&&&&&*/
+#menu {
+  width: 100%;
+  margin-top: -8rem;
+}
+#menu h2 {
+  font-family: "Playfair Display", serif;
+  font-weight: 300;
+  font-size: 12.5vw;
+  color: #ebdfd4;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+#menu .menu_items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem 0.9rem;
+  position: relative;
+  z-index: 1;
+}
+#menu .menu_items .item {
+  position: relative;
+  flex-grow: 1;
+  flex-basis: 15rem;
+  height: 30rem;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+#menu .menu_items .item:first-child {
+  transform: translateY(-1.3rem);
+}
+#menu .menu_items .item:nth-child(2) {
+  transform: translateY(1.3rem);
+}
+#menu .menu_items .item:nth-child(4) {
+  transform: translateY(-1.8rem);
+}
+#menu .menu_items .item:nth-child(4) {
+  transform: translateY(-1.5rem);
+}
+#menu .menu_items .item img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  filter: brightness(0.5);
+  transition: all linear 0.3s;
+}
+#menu .menu_items .item:hover img {
+  filter: brightness(1);
+}
+#menu .menu_items .item h3 {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-align: center;
+  color: #ebdfd4;
+  text-transform: uppercase;
+  line-height: 1.3rem;
+  margin-bottom: 3rem;
+  transition: all linear 0.3s;
+}
+
+/*################### menu end &&&&&&&&&&&&&&&&&&&*/
+/*################### footer start &&&&&&&&&&&&&&&&&&&*/
+footer {
+  width: 100%;
+  background: url(../images/footer-bg.jpg) no-repeat center;
+  background-size: cover;
+  padding-top: 25rem;
+  margin-top: -17rem;
+  color: #ebdfd4;
+}
+footer .footer_wrapper {
+  width: 90%;
+  margin: auto;
+}
+footer .footer_wrapper .logo {
+  width: 100%;
+  margin-bottom: -1.6rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .footer_wrapper .logo::before, footer .footer_wrapper .logo::after {
+  content: "";
+  width: 43%;
+  height: 1px;
+  background: #ebdfd4;
+  position: absolute;
+  top: 50%;
+  left: 0%;
+}
+footer .footer_wrapper .logo::after {
+  left: 57%;
+}
+footer .footer_wrapper .logo img {
+  width: 7rem;
+}
+footer .footer_wrapper .footer_content {
+  width: 100%;
+  padding: 3rem 5rem;
+  border: 1px solid #ebdfd4;
+  border-top: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+footer .footer_wrapper .footer_content nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+}
+footer .footer_wrapper .footer_content nav a {
+  font-family: "Playfair Display", serif;
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+footer .footer_wrapper .footer_content .contact {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .footer_wrapper .footer_content .contact ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 0.8rem;
+}
+footer .footer_wrapper .footer_content .contact ul li {
+  border-left: 1px solid #ebdfd4;
+  padding: 0 2rem;
+}
+footer .footer_wrapper .footer_content .contact ul li:first-child {
+  border-left: none;
+  padding-left: 0;
+}
+footer .footer_wrapper .footer_content .contact .foot_btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+footer .footer_wrapper .footer_content .contact .foot_btn .btn {
+  padding: 0.7rem 3.3rem;
+  border: 1px solid #ebdfd4;
+  text-transform: uppercase;
+  font-family: "Playfair Display", serif;
+  font-weight: 300;
+  font-size: 0.8rem;
+  transition: all linear 0.3s;
+}
+footer .footer_wrapper .footer_content .contact .foot_btn .btn:hover {
+  background: #ebdfd4;
+  color: #000;
+}
+footer .footer_wrapper .footer_bottom {
+  text-align: center;
+  margin-top: 3.2rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 0.8rem;
+}
+footer .footer_wrapper .footer_bottom p {
+  padding-bottom: 1rem;
+}
+footer .bottom {
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+  width: 100%;
+  border-top: 1px solid #ebdfd4;
+}
+footer .bottom .social {
+  padding: 1.5rem 3rem;
+  padding-right: 4rem;
+  font-size: 2rem;
+  border-right: 1px solid #ebdfd4;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+footer .bottom .reserve {
+  margin-left: 1.5rem;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  text-align: center;
+  width: 100%;
+}
+
+/*################### footer end &&&&&&&&&&&&&&&&&&&*//*# sourceMappingURL=style.css.map */

@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@media screen and (max-width: 1140px) {
+  #mission {
+    width: 100%;
+  }
+  #mission .miss_para {
+    gap: 2rem;
+  }
+  #mission .miss_para p {
+    width: 100%;
+    flex-grow: 1;
+  }
+  footer .footer_wrapper .footer_content .contact {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+  }
+}
+@media screen and (max-width: 992px) {
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.4rem 1.5rem;
+    background: url(../images/footer-bg.jpg) center;
+  }
+  header.sticky {
+    background: url(../images/footer-bg.jpg) center;
+  }
+  header .logo {
+    width: 6rem;
+  }
+  header .menu_icon {
+    order: 1;
+    margin: 0;
+    border: none;
+    width: 0;
+  }
+  header .menu_icon span {
+    width: 1.9rem;
+    margin-bottom: 0.2rem;
+  }
+  header .header_btn {
+    display: none !important;
+  }
+  #home {
+    height: 100vh;
+  }
+  #home .side_left {
+    display: none;
+  }
+  #mission {
+    margin-top: 0;
+    padding-top: 3rem;
+    padding-bottom: 4rem;
+  }
+  #mission .pic_scaled {
+    display: none;
+  }
+  #menu h2 {
+    margin-bottom: 1.8rem;
+  }
+  #menu .menu_items {
+    gap: 1rem 0.9rem !important;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  #menu .menu_items .item {
+    transform: translateY(0) !important;
+  }
+  footer .footer_wrapper .logo::before, footer .footer_wrapper .logo::after {
+    width: 35%;
+  }
+  footer .footer_wrapper .logo::after {
+    left: 65%;
+  }
+  footer .footer_wrapper .footer_content {
+    border: none;
+  }
+  footer .footer_wrapper .footer_content nav {
+    flex-direction: column;
+  }
+  footer .footer_wrapper .footer_content nav a {
+    font-size: 1.2rem;
+    margin-bottom: 0.6rem;
+  }
+  footer .footer_wrapper .footer_content .contact {
+    display: none;
+  }
+  footer .footer_wrapper .footer_bottom p {
+    display: none;
+  }
+}
+@media screen and (min-width: 992px) {
+  footer .bottom {
+    display: none;
+  }
+}
+@media screen and (max-width: 752px) {
+  #home {
+    padding-left: 1.7rem;
+    padding-right: 1.7rem;
+    text-align: center;
+  }
+  #home .hero_para {
+    font-size: 2rem;
+  }
+  #home .main_text {
+    font-size: 5rem;
+  }
+  #mission h2 {
+    font-size: 2rem;
+  }
+  #components {
+    padding: 2rem 1.7rem;
+    height: 45rem;
+  }
+  #components h2 {
+    font-size: 5.6rem;
+  }
+  #components .comp_bg img {
+    width: 28vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #components .comp_bg img[alt=home-pic-1] {
+    top: 0rem;
+    left: calc(100% - 30vw);
+  }
+  #components .comp_bg img[alt=home-pic-2] {
+    top: 11rem;
+    left: 0;
+  }
+  #components .comp_bg img[alt=home-pic-3] {
+    top: 23rem;
+    left: 22vw;
+  }
+  #components .comp_bg img[alt=home-pic-4] {
+    top: 24rem;
+    left: calc(100% - 30vw);
+  }
+  #components .comp_bg img[alt=home-pic-5] {
+    top: 13rem;
+    left: calc(100% - 45vw);
+    width: 32vw;
+  }
+}
+@media screen and (max-width: 572px) {
+  .menu_box li:first-child {
+    margin-top: 3rem;
+  }
+  .menu_box li a {
+    font-size: 1rem;
+  }
+  .menu_box .order_box .btn {
+    width: 10rem;
+    padding: 0.5rem 0;
+    font-size: 0.5;
+  }
+  #mission .mis_box .miss_para {
+    flex-wrap: wrap;
+  }
+  #components h2 {
+    font-size: 3.5rem;
+  }
+  footer .footer_wrapper .logo::before, footer .footer_wrapper .logo::after {
+    width: 27%;
+  }
+  footer .footer_wrapper .logo::after {
+    left: 73%;
+  }
+  footer .logo::before, footer .logo::after {
+    width: 35%;
+  }
+  footer .logo::after {
+    left: 73%;
+  }
+  footer .bottom .social {
+    flex-wrap: wrap;
+    padding-right: 1rem;
+    gap: 0.2rem;
+  }
+}
+@media screen and (max-width: 353px) {
+  #home .hero_para {
+    font-size: 1rem;
+  }
+  #home .main_text {
+    font-size: 3rem;
+  }
+  #components h2 {
+    font-size: 14vw;
+  }
+}/*# sourceMappingURL=responsive.css.map */

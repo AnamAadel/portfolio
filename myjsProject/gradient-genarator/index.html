@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gradient generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="swich_buttons">
+        <div class="direction">
+            <h3>Direction</h3>
+            <select class="dirBtn">
+                <option value="to top">Top</option>
+                <option value="to right top">Right top</option>
+                <option value="to right">Right</option>
+                <option value="to bottom">Bottom</option>
+                <option value="to left">Left</option>
+                <option value="to left top">Left top</option>
+            </select>
+        </div>
+        <div class="color_box">
+            <h3>colors</h3>
+            <div class="colors">
+                <input type="color">
+                <input type="color">
+            </div>
+        </div>
+    </div>
+    
+    <div class="garient_box">
+        <div class="main_box"></div>
+        <p class="showText" title="Copy code">background: linear-gradient(to right,rgb(118, 109, 223) ,rgb(181, 4, 252))</p>
+        <div class="buttons">
+            <button class="refresh">Refresh</button>
+            <button class="copy">Copy code</button>
+        </div>
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+</html>

@@ -1,7 +1,7 @@
 /************* media 992px start************/
 @media screen and (max-width: 992px){
     .main_wraper{
-        margin: 0;
+        padding: 0;
     }
     section{
         text-align: center;
@@ -114,7 +114,7 @@
         word-break: break-all;
     }
     #about .ab_list{
-        padding: 0;
+        padding: 0 30px;
     }
     #about .skill_content .prog_area{
         padding: 0 2rem;
@@ -130,9 +130,6 @@
     #home .home_text .mine .profession{
         word-break: break-all;
     }
-    /* #side_nav .side_content .parson .pars_image{
-        display: none;
-    } */
     #side_nav .side_content .parson .name{
         padding: 1.3rem 0;
         display: none;

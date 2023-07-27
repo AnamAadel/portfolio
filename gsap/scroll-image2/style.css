@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    overscroll-behavior: none;
+    overflow-x: hidden;
+}
+#container{
+    overscroll-behavior: none;
+  /* width: 600%; */
+  height: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+    
+}
+/* .scrollingBox{
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(./images/Wazir.jpg) no-repeat;
+    background-size: cover;
+} */
+.box{
+    width: 100vw;
+    height: 100vh;
+    border: 1px solid burlywood;
+    font-size: 5rem;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(./images/Great_Mosque_of_Mecca.jpg) no-repeat center;
+    background-size: cover;
+    color: #444038;
+    flex-shrink: 0;
+    /* position: absolute; */
+}
+.b{
+    background: url(./images/Jama.jpg) center;
+    background-size: cover;
+}
+.c{
+    background: url(./images/Nasir-al-Mulk.jpg) center;
+     background-size: cover;
+}
+.d{
+    background: url(./images/Rijeka.jpg) center;
+    background-size: cover;
+}
+.e{
+    background: url(./images/Sophia\ .jpg) center;
+    background-size: cover;
+}
+.f{
+    background: url(./images/Sultan.jpg) center;
+    background-size: cover;
+}
+
+
+
+/* body {
+  overscroll-behavior: none;
+  height: 100vh;
+}
+.container {
+  overscroll-behavior: none;
+  width: 600%;
+  height: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+} */

@@ -1,0 +1,69 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.box{
+    width: 370px;
+    height: 350px;
+    position: relative;
+}
+.box img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 20px;
+}
+.box .img_box{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(./iPad.jpeg) no-repeat;
+    background-size: 640px;
+    background-position: 50%;
+   pointer-events: none;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    opacity: 0;
+}
+.box:hover .img_box{
+    opacity: 1;
+}
+.imgList{
+    display: flex;
+    gap: .8rem;
+    list-style: none;
+    margin-top: 1rem;
+    /* border-top: 1px solid black;
+    border-bottom: 1px solid black; */
+}
+.imgList li{
+    width: 70px;
+    height: 70px;
+
+}
+.imgList li.active{
+    border: 5px solid rgb(73, 214, 144);
+}
+.imgList li img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}

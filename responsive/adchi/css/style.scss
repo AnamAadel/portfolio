@@ -1,0 +1,599 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import "font";
+@import "flexbox";
+@import "varaibles";
+@import "common";
+$playfair: 'Playfair Display', serif;
+$Roboto: 'Roboto', sans-serif;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+a{
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+}
+h1,h2,h3,h4,h5,h6{
+    line-height: .8;
+
+}
+ul,ol,li{
+    list-style: none;
+}
+.text_anim{
+    display: inline-block;
+    transform-origin: center;
+    transform-style: preserve-3d; 
+}
+/*################### header start*****************/
+
+header{
+    @include flex_box(start, start);
+    width: 100%;
+    padding-bottom: 1.3rem;
+    background: transparent;
+    // background-blend-mode: ;
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: $white;
+    z-index: 99999;
+    transition: $trans;
+    
+    &.sticky{
+        background: #091b1e;
+        padding-bottom: 0rem;
+        
+        
+        &.sticky{
+            .logo{
+                width: 4.2rem;
+                margin-top: 0;
+                transition: $trans;
+            }
+        }
+    }
+
+    .menu_icon{
+        width: 3rem;
+        height: 3rem;
+        @include flex_box(center, center);
+        flex-direction: column;
+        margin: 0 2rem 0 0;
+        border: 1px solid $white;
+        border-left: none;
+        border-top: none;
+        gap: .2rem;
+        span{
+            width: 1.1rem;
+            height: 0.4px;
+            background: $white;
+            display: inline-block;
+            transition: $trans;
+            transform-origin: left;
+
+        }
+
+        &.display{
+            gap: 0.4rem;
+            .top{
+                transform: rotate(45deg);
+            }
+            .bottom{
+                transform: rotate(-45deg);
+            }
+
+            .center{
+                opacity: 0;
+                transform: translateY(10px);
+            }
+        }
+    }
+    .logo{
+        width: 8rem;
+        margin-right: auto;
+        transition: $trans;
+
+        img{
+            width: 100%;
+            margin-top: .8rem;
+        }
+
+        
+    }
+    .header_btn{
+        width: 26rem;
+        height: 3rem;
+        @include flex_box(space-around, start);
+        border: 1px solid $white;
+        border-top: none;
+        border-right: none;
+        color: $white;
+        
+        .btn{
+            text-transform: capitalize;
+            @include fonts($playfair,400,.8rem);
+            border-right: 1px solid $white;
+            width: calc(100% / 3);
+            text-align: center;
+            line-height: 3rem;
+            transition: $trans;
+                                    
+            &:hover{
+                background: $white;
+                color: $black;
+            }
+        }
+
+    }
+
+}
+/*################### header end*****************/
+/*################### home start &&&&&&&&&&&&&&&&&&&*/
+.menu_box{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 100%;
+    background: url(../images/footer-bg.jpg) no-repeat;
+    background-size: cover;
+    @include flex_box(start,center);
+    flex-direction: column;
+    padding: 5rem;
+    transition: all linear 1s;
+    z-index: 99;
+    color: $white;
+    opacity: 0;
+    overflow-y: auto;
+
+    &.display{
+        right: 0%;
+        opacity: 1;
+    }
+
+    li{
+        a{
+            display: block;
+            @include fonts($playfair,400,1.9rem);
+            text-align: center;
+            text-transform: uppercase;
+            margin-bottom: 1.2rem;
+        }
+    }
+
+    .social_links{
+        font-size: 2.2rem;
+    }
+    .order_box{
+        
+        .btn{
+            display: block;
+            text-align: center;
+            margin-bottom: .8rem;
+            width: 16rem;
+            padding: .8rem 0;
+            border: 1px solid transparent;
+            @include fonts($playfair,500,.8rem);
+            text-transform: uppercase;
+            background: $white;
+            color: $black;
+            transition: $trans;
+
+            &:hover{
+                background: transparent;
+                color: $white;
+                border-color: $white;
+            }
+        }
+    }
+}
+
+#home{
+    width: 100%;
+    height: 73rem;
+    position: relative;
+    z-index: 1;
+    padding: 9rem 6rem;
+    color:$white;
+
+
+    
+
+    .hero_imag{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .side_left{
+        width: 3rem;
+        height: 115vh;
+        color: $white;
+        @include flex_box(center,center);
+        flex-direction: column;
+        border-right: 1px solid $white;
+        text-transform: uppercase;
+        @include fonts($playfair,500,.8rem);
+        position: absolute;
+        top: 0;
+        left: 0;
+        
+
+        .brand_text{
+            @include flex_box(center,center);
+            flex-direction: column;
+            margin-top: auto;
+            margin-bottom: auto;
+            gap: .1rem;
+        }
+    }
+    .social{
+        @include flex_box(center,center);
+            flex-direction: column;
+            margin-bottom: 1.3rem;
+
+        a{
+            font-size: 1.5rem;
+        }
+    }
+    .hero_para{
+        
+        @include fonts($playfair,300,2.5vw);
+        text-transform: uppercase
+    }
+    .main_text{
+        @include fonts($playfair,300,8vw);
+        text-transform: capitalize;
+        
+    }
+
+}
+/*################### home end &&&&&&&&&&&&&&&&&&&*/
+/*################### missing start &&&&&&&&&&&&&&&&&&&*/
+#mission{
+    width: 90%;
+    background: url(../images/footer-bg.jpg);
+    color: $white;
+    padding: 10rem 5vw 22rem;
+    position: relative;
+    margin-top: -28.1rem;
+    z-index: 1;
+    
+    .mis_box{
+        @include flex_box(start,start);
+        flex-direction: column
+
+    }
+
+    h2{
+        @include fonts($playfair,100, 4vw);
+        text-transform: capitalize;
+    }
+    .miss_para{
+        width: fit-content;
+        @include flex_box(space-between,start);
+        gap: 6.6rem;
+        margin-top: 3rem;
+        margin-left: auto;
+        margin-right: 0;
+        @include fonts($Roboto, 300,.8rem);
+
+        p{
+            width: 25rem;
+            line-height: 1.3rem;
+        }
+    }
+    .misBtn{
+        margin-left: auto;
+        @include fonts($playfair,300,1.2rem);
+        margin-top: 1.6rem;
+        position: relative;
+        &::after{
+            content: "";
+            width: 0%;
+            height: .1rem;
+            position: absolute;
+            left: 0;
+            bottom: -.2rem;
+            background: $white;
+            transition: $trans;
+        }
+        &:hover::after{
+            width: 100%;
+        }
+    }
+    .pic_scaled{
+        width: 85%;
+        position: absolute;
+        bottom: -20%;
+        right: 0;
+    }
+
+}
+
+
+
+/*################### missing end &&&&&&&&&&&&&&&&&&&*/
+/*################### components start &&&&&&&&&&&&&&&&&&&*/
+#components{
+    width: 100%;
+    height: 75rem;
+    padding: 9rem 7rem;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    
+
+    h2{
+        @include fonts($playfair, 300, 9vw);
+        color: $white;
+    }
+
+    .comp_bg{
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+
+        img{
+            width: 28vw;
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            &[alt="home-pic-1"]{
+                top: 0rem;
+                left: calc(100% - 30vw);
+            }
+            &[alt="home-pic-2"]{
+                top: 25rem;
+                left: 0;
+            }
+            &[alt="home-pic-3"]{
+                top: 37rem;
+                left: 22vw;
+            }
+            &[alt="home-pic-4"]{
+                top: 42rem;
+                left: calc(100% - 30vw);
+            }
+            &[alt="home-pic-5"]{
+                top: 27rem;
+                left: calc(100% - 45vw);
+                width: 32vw;
+            }
+
+        }
+
+    }
+
+
+}
+/*################### components end &&&&&&&&&&&&&&&&&&&*/
+/*################### menu start &&&&&&&&&&&&&&&&&&&*/
+#menu{
+    width: 100%;
+    margin-top: -8rem;
+
+    h2{
+        @include fonts($playfair, 300, 12.5vw);
+        color: $white;
+        text-align: center;
+        position: relative;
+        z-index: 1;
+    }
+    .menu_items{
+        @include flex_box(space-between,center);
+        gap: 4rem .9rem;
+        position: relative;
+        z-index: 1;
+
+        .item{
+            position: relative;
+            flex-grow: 1;
+            flex-basis: 15rem;
+            height: 30rem;
+            z-index: 1;
+            @include flex_box(center,flex-end);
+
+            &:first-child{
+                transform: translateY(-1.3rem);
+            }
+            &:nth-child(2){
+                transform: translateY(1.3rem);
+            }
+            &:nth-child(4){
+                transform: translateY(-1.8rem);
+            }
+            &:nth-child(4){
+                transform: translateY(-1.5rem);
+            }
+            img{
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                object-fit: cover;
+                filter: brightness(.5);
+                transition: $trans;
+
+                
+            }
+
+            &:hover{
+                img{
+                    filter: brightness(1);
+
+                }
+            }
+
+            
+            h3{
+                @include fonts($playfair, 700,1.2rem);
+                text-align: center;
+                color: $white;
+                text-transform: uppercase;
+                line-height: 1.3rem;
+                margin-bottom: 3rem;
+                transition: $trans;
+            }
+        }
+
+    }
+}
+/*################### menu end &&&&&&&&&&&&&&&&&&&*/
+/*################### footer start &&&&&&&&&&&&&&&&&&&*/
+footer{
+    width: 100%;
+    background: url(../images/footer-bg.jpg) no-repeat center;
+    background-size: cover;
+    padding-top: 25rem;
+    margin-top: -17rem;
+    color: $white;
+
+    .footer_wrapper{
+        width: 90%;
+        margin: auto;
+
+        .logo{
+            width: 100%;
+            margin-bottom: -1.6rem;
+            position: relative;
+            @include flex_box(center,center);
+    
+            &::before,&::after{
+                content: '';
+                width: 43%;
+                height: 1px;
+                background: $white;
+                position: absolute;
+                top: 50%;
+                left: 0%;
+            }
+    
+            &::after{
+                left: calc(100% - 43%);
+            }
+            img{
+                width: 7rem;
+            }
+        }
+        .footer_content{
+            width: 100%;
+            padding: 3rem 5rem;
+            border: 1px solid $white;
+            border-top: none;
+            @include flex_box(center,center);
+            flex-direction: column;
+            gap: 2.5rem;
+    
+    
+            nav{
+                width: 100%;
+                @include flex_box(space-between,center);
+                text-transform: uppercase;
+    
+                a{
+                    @include fonts($playfair,300, .9rem);
+                }
+            }
+    
+            .contact{
+                width: 100%;
+                @include flex_box(space-between,center);
+    
+                ul{
+                    // width: 50%;
+                    @include flex_box(space-between,center); 
+                    text-transform: uppercase;
+                    @include fonts($Roboto,400, .8rem);
+                    
+    
+                    li{
+                        border-left: 1px solid $white;
+                        padding: 0 2rem;
+    
+                        &:first-child{
+                            border-left: none;
+                            padding-left: 0;
+                        }
+                    }
+                }
+    
+                .foot_btn{
+                    @include flex_box(space-between,center);
+                    gap: 2rem;
+    
+                    .btn{
+                        padding: .7rem 3.3rem;
+                        border: 1px solid $white;
+                        text-transform: uppercase;
+                        @include fonts($playfair,300, .8rem);
+                        transition: $trans;
+    
+    
+                        &:hover{
+                            background: $white;
+                            color: $black;
+                        }
+                    }
+                }
+            }
+            
+        }
+        .footer_bottom{
+            text-align: center;
+            margin-top: 3.2rem;
+            @include fonts($Roboto,400, .8rem);
+    
+            p{
+                padding-bottom: 1rem;
+            }
+
+        }
+    }
+    
+    .bottom{
+        @include flex_box(stretch, center);
+        width: 100%;
+        border-top: 1px solid $white;
+        // border-bottom: 1px solid $white;
+
+        .social{
+            padding: 1.5rem 3rem;
+            padding-right: 4rem;
+            font-size: 2rem;
+            border-right: 1px solid $white;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+
+        }
+        .reserve{
+            margin-left: 1.5rem;
+            @include fonts($playfair,400, 1.2rem);
+            text-transform: uppercase;
+            text-align: center;
+            width: 100%;
+            
+        }
+    }
+}
+/*################### footer end &&&&&&&&&&&&&&&&&&&*/
+

@@ -1,0 +1,763 @@
+
+:root{
+    /***** fonts *****/
+    --blackjack: blackjack, sans-serif;
+    --Barlow: 'Barlow', sans-serif;
+    --Baskervville: 'Baskervville', serif;
+    --Montserrat:  'Montserrat', sans-serif;
+    /******* color *******/
+    --yelow: #DB9F5D;
+    --gray: #8c8c8c;
+    --white: #fff;
+
+}
+*{
+    padding: 0;margin: 0;box-sizing: border-box;
+}
+@font-face {
+    font-family: blackjack;
+    src: url(../fonts/BLACKJAR.TTF);
+}
+a{text-decoration: none;display: inline-block;color: inherit;}
+ul,ol,li{list-style: none;}
+h1,h2,h3,h4,h5,h6{line-height: 0.8;}
+p{
+    font-family: var(--Barlow);
+    
+}
+html,body{
+    overflow-x: hidden;
+}
+.container{
+    width: 1285px;
+    margin: auto;
+}
+/* common css end */
+/* header css strart */
+header{
+    width: 100%;
+    text-align: center;
+    padding: 80px 0 60px;
+    font-family: var(--Baskervville);
+    font-weight: 400;
+    text-transform: uppercase;
+}
+header h1{
+    margin-bottom: 29px;
+    font-size: 66.64px;
+    color: var(--yelow);
+}
+header h2{
+    font-size: 21.07px;
+    color: var(--gray);
+    
+}
+
+/* navigation css start */
+/* navigation css start*/
+nav{
+    width: 100%;
+    margin-bottom: 58px;
+}
+nav .navigation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    flex-wrap: wrap;
+}
+nav .navigation a,nav .navigation span,nav .navigation input[type=search]::placeholder{
+    font-family: var(--Montserrat);
+    font-size: 14.52px;
+    font-weight: 600;
+    color: var(--gray);
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+nav .navigation input[type=search]{
+    width: 240px;
+    padding: 10px 0 5px 10px;
+    border: 1px solid var(--gray);
+}
+/* navigation css end */
+/* banner css start */
+#banner{
+    width: 100%;
+    position: relative;
+}
+#banner::before{
+    content: '';
+    width: 600px;
+    height: 400px;
+    background: url(../images/trecture.png) no-repeat right;
+    position: absolute;
+    bottom: -250px;
+    right: 0;
+    z-index: -1;
+}
+#banner .bann-text{
+    font-family: var(--Montserrat);
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 14.29px;
+    text-align: center;
+    padding: 10px;
+    text-transform: uppercase;
+    color: var(--yelow);
+    position: relative;
+    z-index: 1;
+}
+#banner .banner-imag{
+    position: relative;
+}
+#banner .banner-imag::after{
+    content: '';
+    width: 600px;
+    height: 400px;
+    background: url(../images/design1.png) no-repeat right;
+    position: absolute;
+    top: -100px;
+    right: 0;
+}
+
+#banner .banner-imag img{
+    width: 100%;
+}
+#banner .banner-imag form{
+    position: absolute;
+    bottom: 55px;
+    right: 30px;
+    width: 240px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+#banner .banner-imag form input{
+    height: 30px;
+    padding: 15px;
+    font-family: var(--Montserrat);
+    font-size: 7.53px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+#banner .banner-imag form input[type=submit]{
+    font-family: var(--Baskervville);
+    font-size: 19.17px;
+    font-weight: 400;
+    color: var(--white);
+    padding: 0;
+    background: var(--yelow);
+    border: none;
+}
+/****************** banner css end *******************/
+/****************** decorate css start *******************/
+#decorate{
+    width: 100%;
+    padding: 55px ;
+}
+#decorate .head-text{
+    text-align: center;
+    font-family: var(--Baskervville);
+    font-size: 36.05px;
+    font-weight: 400;
+    color: var(--yelow);
+    margin-bottom: 38px;
+}
+#decorate .decorate-content{
+    width: 791px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    gap: 25px 50px;
+}
+#decorate .decorate-content .dect-box{
+    flex-basis: 230px;
+}
+#decorate .decorate-content .dect-box> img{
+    width: 100%;
+}
+/********* carousel style start **************/
+.decorate-content .dect-box .swiper {
+    width: 230px;
+    height: 100%;
+  }
+  .decorate-content .dect-box .swiper .swiper-button-prev::after{
+    content: url(../images/arrow.png);
+    object-fit: contain;
+    transform: rotateY(180deg);
+  }
+  .decorate-content .dect-box .swiper .swiper-button-next::after{
+    content: url(../images/arrow.png);
+    object-fit: contain;
+  }
+ .decorate-content .dect-box .swiper-slide {
+    text-align: left;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    /* padding-top: 30px; */
+  }
+
+ .decorate-content .dect-box .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .decorate-content .dect-box .swiper-slide .text{
+    width: 100%;
+    background: var(--gray);
+    color: var(--white);
+    font-size: 9px;
+    padding: 5px 10px;
+    text-align: left;
+    z-index: 1;
+  }
+/********* carousel style end **************/
+#decorate .para{
+    width: 650px;
+    margin: 33px auto 0;
+    font-size: 9.83px;
+    font-weight: 500;
+    text-align: center;
+    color: var(--gray);
+
+}
+/****************** decorate css end *******************/
+/****************** expert css start *******************/
+#expert{
+    width: 100%;
+    padding: 50px 0;
+}
+#expert .expert-row{
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+}
+/********** exper image  ********/
+#expert .expert-row .expert-img{
+    flex-basis: 70%;
+    position: relative;
+}
+#expert .expert-row .expert-img::after{
+    content: '';
+    width: 350px;
+    height: 350px;
+    position: absolute;
+    bottom: -40px;
+    right: -150px;
+    background: url(../images/design3.png) no-repeat right;
+    background-size: 100%;
+}
+#expert .expert-row .expert-img img{
+    width: 100%;
+    filter: blur(30px);
+}
+/********** exper text  ********/
+#expert .expert-row .expert-text{
+    flex-basis: 30%;
+    padding-top: 38px;
+}
+#expert .expert-row .expert-text h2,#expert .expert-row .expert-text h3,#expert .expert-row .expert-text h4{
+    font-family: var(--Baskervville);
+    font-size: 35.42px;
+    font-weight: 400;
+    color: var(--gray);
+    line-height: 40px;
+}
+#expert .expert-row .expert-text h3{
+    color: var(--yelow);
+    margin-top: 60px;
+}
+#expert .expert-row .expert-text h4{
+    font-size: 19.17px;
+    padding: 8px 29px;
+    background: var(--yelow);
+    color: var(--white);
+    text-transform: uppercase;
+    margin-top: 35px;
+    text-align: center;
+    display: inline-block;
+}
+#expert .expert-row .expert-text h5{
+    font-family: var(--blackjack);
+    font-size: 30.24px;
+    font-weight: 400;
+    margin-top: 135px;
+}
+/****************** expert css end *******************/
+/****************** contact css start *******************/
+#contact{
+    width: 100%;
+    padding: 35px 0;
+    background: url(../images/design2.png)no-repeat , url(../images/design4.png) no-repeat;
+    background-position: left 7%, left center;
+}
+#contact .contact-row{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 60px;
+}
+#contact .contact-row .contact-text{
+    flex-basis: 480px;
+}
+.contact-row .contact-text h2,.contact-row .contact-text h3{
+    font-family: var(--Baskervville);
+    font-size: 35.42px;
+    font-weight: 400px;
+    color: var(--yelow);
+    line-height: 45px;
+}
+.contact-row .contact-text h3{
+    color: var(--gray);
+    margin-bottom: 32px;
+}
+.contact-row .contact-text input{
+    width: 100%;
+    height: 42px;
+
+}
+.contact-row .contact-text input[type=submit]{
+    background: var(--yelow);
+    font-family: var(--Baskervville);
+    font-size: 22.57px;
+    font-weight: 400px;
+    margin-top: 10px;
+    border: none;
+    color: var(--white);
+}
+.contact-row .contact-text p{
+    text-align: right;
+    font-size: 14.46px;
+    font-weight: 500;
+    color: var(--gray);
+    /* line-height: 20px; */
+    margin-top: 20px;
+}
+#contact .contact-row .contact-imag{
+    flex-basis: 455px;
+}
+#contact .contact-row .contact-imag img{
+    width: 100%;
+}
+/****************** contact css end *******************/
+/****************** season css start *******************/
+#season{
+    width: 100%;
+    padding: 55px 0;
+    background: url(../images/design7.png) no-repeat right bottom;
+
+}
+#season .heading{
+    text-align: center;
+    font-family: var(--Baskervville);
+    font-size: 56.49px;
+    font-weight: 400;
+    color: var(--yelow);
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+}
+#season .heading::before{
+    content: '';
+    width: 950px;
+    height: 400px;
+    background: url(../images/design6.png) no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: -66px;
+    left: 45%;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+#season .season-row{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+#season .season-row .room-imag1{
+    flex-basis: 395px;
+    align-self: flex-end;
+    position: relative;
+}
+#season .season-row .room-imag1::before{
+    content: '';
+    width: 188px;
+    height: 28px;
+    background: var(--yelow);
+    position: absolute;
+    top: -37px;
+    right: 0;
+}
+#season .season-row .room-imag1::after{
+    content: '';
+    width: 50%;
+    height: 100%;
+    background: url(../images/leaf.png) no-repeat left;
+    position: absolute;
+    bottom: 0;
+    left: -17%;
+    z-index: -1;
+}
+#season .season-row .room-imag2{
+    flex-basis: 528px;
+}
+#season .season-row .room-imag2 h2{
+    font-family: var(--Baskervville);
+    font-size: 33.33px;
+    font-weight: 400;
+    color: var(--yelow);
+    margin-top: 34px;
+    padding: 0 15px ;
+    line-height: 40px;
+}
+#season .season-row .room-imag3{
+    flex-basis: 229px;
+}
+.season-row div[class^=room],.season-row div[class^=room] .imag-box{
+    display: flex;
+    flex-direction: column;
+}
+.season-row div[class^=room] img{
+    width: 100%;
+}
+#season .season-row .subHeading{
+    padding: 10px; 
+    text-align: center;
+    background: var(--gray);
+    color: var(--white);
+}
+/****************** season css end *******************/
+/****************** renovate css start *******************/
+#renovate{
+    width: 100%;
+    padding: 55px 0;
+}
+#renovate .renovate-row{
+    padding-bottom: 150px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 25px;
+    background: url(../images/drow.png) no-repeat;
+    background-position: 750px 390px;
+}
+#renovate .renovate-row .reno-text{
+    flex-basis: 325px;
+    text-align: right;
+    color: var(--gray);
+    position: relative;
+}
+
+#renovate .renovate-row .reno-text h2,#renovate .renovate-row .reno-text h3{
+    font-family: var(--Baskervville);
+    font-size: 35.42px;
+    font-weight: 400px;
+    margin-top: 55px;
+    color: var(--yelow);
+    line-height: 40px;
+}
+#renovate .renovate-row .reno-text h3{
+    color: var(--gray);
+}
+#renovate .renovate-row .reno-text h4{
+    font-family: var(--blackjack);
+    font-size: 30px;
+    font-weight: 400;
+    margin-top: 71px;
+}
+#renovate .renovate-row .reno-imag{
+    flex-basis: 727px;
+    position: relative;
+}
+#renovate .renovate-row .reno-imag::before{
+    content: '';
+    width: 50px;
+    height: 172px;
+    position: absolute;
+    top: 20px;
+    right: -40px;
+    background: var(--yelow);
+}
+#renovate .renovate-row .reno-imag::after{
+    content: '';
+    width: 250px;
+    height: 400px;
+    position: absolute;
+    bottom: -120px;
+    left: 0px;
+    background: url(../images/leaf2.png) no-repeat right bottom;
+    z-index: 1;
+}
+#renovate .renovate-row .reno-imag img[alt=image1]{
+    width: 100%;
+    padding: 10px;
+    filter: blur(30px);
+}
+#renovate .renovate-row .reno-imag img[alt=image2]{
+    padding: 10px;
+    width: 338px;
+    position: absolute;
+    right: 100px;
+    bottom: -150px;
+}
+#renovate .renovate-row .reno-imag .dots{
+    width: 30px;
+    height: 125px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    position: absolute;
+    top: 112px;
+    right: 4px;
+    justify-content: space-between;
+}
+#renovate .renovate-row .reno-imag .dots span{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 5px solid var(--white);
+    background: #8c8c8c;
+}
+#renovate .renovate-row .reno-imag .dots span.dot1{
+    background: var(--yelow);
+}
+#renovate .renovate-row .reno-imag .dots span.dot2{
+    background: #E0CDB6;
+}
+/****************** renovate css end *******************/
+/****************** giftTable css end *******************/
+#giftTable{
+    width: 100%;
+    padding: 55px;
+}
+#giftTable .gift-row{
+    height: 885px;
+    background: url(../images/sec-banner.png) no-repeat center;
+    background-size: 100%;
+    padding-top: 55px;
+    position: relative;
+}
+#giftTable .gift-row .heading{
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+#giftTable .gift-row .heading::before{
+    content: '';
+    width: 100%;
+    height: 400px;
+    background: url(../images/design8.png) no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: -200px;
+    left: 0;
+    z-index: -1;
+}
+#giftTable .gift-row::after{
+    content: '';
+    width: 300px;
+    height: 160px;
+    background: url(../images/sheild.png) no-repeat;
+    background-size: contain;
+    position: absolute;
+    bottom: -90px;
+    right: 10%;
+    z-index: -1;
+}
+#giftTable .gift-row .heading h2{
+    font-family: var(--Baskervville);
+    font-size: 35.42px;
+    color: var(--yelow);
+    font-weight: 400;
+    line-height: 50px;
+}
+#giftTable .gift-row .gift-content{
+    width: 550px;
+    margin: 230px auto 172px;
+    padding: 57px 50px;
+    background: rgba(255,255,255,0.8);
+}
+#giftTable .gift-row .gift-content form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.gift-content form input,.gift-content form select{
+    height: 30px;
+    padding-left: 15px;
+    font-family: var(--Montserrat);
+    font-size: 10.59px;
+    font-weight: 400;
+}
+.gift-content form input::placeholder{
+    text-transform: uppercase;
+}
+.gift-content form input[type=submit]{
+    background: var(--yelow);
+    font-family: var(--Baskervville);
+    font-size: 20.52px;
+    font-weight: 400;
+    color: var(--white);
+    text-transform: uppercase;
+    border: none;
+}
+#giftTable .gift-row .gift-content p{
+    font-size: 14.5px;
+    font-weight: 500;
+    margin-top: 15px;
+}
+/****************** giftTable css start *******************/
+/****************** discount css start *******************/
+#discount{
+    width: 100%;
+    padding: 55px;
+    background: url(../images/secBg.png) no-repeat right center;
+
+}
+#discount .disc-row{
+    display: flex;
+    justify-content: flex-start;
+    gap: 185px;
+
+}
+#discount .disc-row .disc-imag{
+    flex-basis: 610px;
+    position: relative;
+}
+#discount .disc-row .disc-imag::before{
+    content: '';
+    width: 65px;
+    height: 232px;
+    background: var(--yelow);
+    position: absolute;
+    bottom: 3px;
+    right: -74px;
+
+}
+#discount .disc-row .disc-imag img[alt=room1]{
+    /* width: 100%; */
+    height: 855px;
+}
+#discount .disc-row .disc-imag img[alt=room2]{
+    width: 508px;
+    position: absolute;
+    top: 50px;
+    right: -430px;
+}
+#discount .disc-row .disc-imag img[alt=room3]{
+    width: 340px;
+    position: absolute;
+    top: 390px;
+    right: -349px;
+}
+#discount .disc-row .disc-text{
+    flex-basis: 45%;
+    align-self: flex-end;
+    display: flex;
+    color: var(--yelow);
+    gap: 16px;
+}
+#discount .disc-row .disc-text h2{
+    font-family: var(--Baskervville);
+    font-size: 125.02px;
+    font-weight: 400;
+
+}
+#discount .disc-row .disc-text h3{
+    font-family: var(--Baskervville);
+    font-size: 44.13px;
+    font-weight: 400;
+    line-height: 60px;
+}
+/****************** discount css end *******************/
+/****************** footer css  start *******************/
+footer{
+    width: 100%;
+    padding: 65px 0 0;
+
+}
+footer .foot-content{
+    display: flex;
+    justify-content: space-between;
+    gap: 115px;
+    background: var(--gray);
+    padding: 125px 55px;
+}
+/* foot text first child */
+footer .foot-content .foot-text{
+    flex-basis: 333px;
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    
+}
+footer .foot-content .foot-text a{
+    text-transform: uppercase;
+    align-self: flex-end;
+    margin-bottom: 20px;
+    font-family: var(--Montserrat);
+    font-size: 14.52px;
+}
+/* foot text second child */
+footer .foot-content .foot-text h4.top{
+    font-family: var(--Baskervville);
+    font-size: 23.35px;
+    font-weight: 400;
+    line-height: 35px;
+}
+footer .foot-content .foot-text form{
+    width: 100%;
+    display: flex;
+    margin: 20px 0 25px;
+    flex-direction: column;
+    gap: 7px;
+
+}
+footer .foot-content .foot-text form input{
+    border: none;
+    height: 25px;
+    
+}
+footer .foot-content .foot-text form input[type=submit]{
+    font-family: var(--Baskervville);
+    font-size: 14.88px;
+    background: var(--yelow);
+    color: var(--white);
+}
+footer .foot-content .foot-text p{
+    font-size: 9.54px;
+    font-weight: 500;
+}
+
+/* foot text third child */
+.foot-text .sub-title, .foot-text .logo{
+    font-family: var(--Baskervville);
+    font-size: 15.87;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-top: 25px;
+}
+.foot-text .logo{
+    font-size: 57.4px;
+    margin: 22px 0 60px ;
+}
+footer .foot-content .foot-text .slogan{
+    font-family: var(--blackjack);
+    font-size: 30.38px;
+    font-weight: 400;
+}
+/****************** footer css end *******************/

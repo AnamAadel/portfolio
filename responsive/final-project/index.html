@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Project</title>
+    <!-- google font icons link -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <!-- font Awesome font icons link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- custom css link -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- responsive css link -->
+    <link rel="stylesheet" href="./css/responsive.css">
+</head>
+<body>
+    <!-----------$------------$---------
+                full body start
+                -------------$-------------$-------->
+    <div class="d-flex align-items-start" id="dashboard">
+      <div id="water_effect"></div>
+       <!-- navigation part  start-->
+       <div class="nav" role="tablist" aria-orientation="vertical" >
+         
+         <div class="menu_toggler elem_color" >
+          <div class="togg_color elem_color">Menu</div>
+          <span class="material-symbols-outlined one">menu</span>
+           <span class="material-symbols-outlined two">close</span>
+         </div>
+          
+          <a href="#" class="nav-link active" data-bs-toggle="pill" data-bs-target="#home" role="tab" aria-controls="v-pills-home" aria-selected="true"><span class="material-symbols-outlined elem_color">home_app_logo</span><span class="nav_text elem_color">Home</span></a>
+
+          <a href="#" class="nav-link" data-bs-toggle="pill" data-bs-target="#about" role="tab" aria-controls="v-pills-profile" aria-selected="false"><span class="material-symbols-outlined elem_color">person</span><span class="nav_text elem_color">About Me</span></a>
+          
+          <a href="#" class="nav-link" data-bs-toggle="pill" data-bs-target="#experience" role="tab" aria-controls="v-pills-messages" aria-selected="false"><span class="material-symbols-outlined elem_color">workspace_premium</span><span class="nav_text elem_color">Experience</span></a>
+          
+          <a href="#" class="nav-link" data-bs-toggle="pill" data-bs-target="#portfolio" role="tab" aria-controls="v-pills-settings" aria-selected="false"><span class="material-symbols-outlined elem_color">folder_open</span><span class="nav_text elem_color">Portfolio</span></a>
+          
+          <a href="#" class="nav-link" data-bs-toggle="pill" data-bs-target="#blog" role="tab" aria-controls="v-pills-settings" aria-selected="false"><span class="material-symbols-outlined elem_color ">newspaper</span><span class="nav_text elem_color">Blog</span></a>
+          
+          <a href="#" class="nav-link" data-bs-toggle="pill" data-bs-target="#contact" role="tab" aria-controls="v-pills-settings" aria-selected="false"><span class="material-symbols-outlined elem_color">person_pin_circle</span><span class="nav_text elem_color">Contact</span></a>
+
+          <div class="indicator">
+            <span class="top"></span>
+            <span class="bottom"></span>
+          </div>
+          
+
+        </div>
+        <!-- navigation part end-->
+        <div class="tab-content w-100" id="v-pills-tabContent">
+          <!-----------$------------$---------
+                        home page start
+                        -------------$-------------$-------->
+          <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+            <div class="home_scroll">
+              <div class="container">
+                <div class="row justify-content-center justify-content-md-start home_content">
+                  <!-- first collumn -->
+                  <div class="col-8 col-md-5 col-lg-4">
+                    <!-- my image start-->
+                    <div class="par_image_box">
+                      <div class="parson_imag elem_color">
+                        <img src="./images/person.jpg" alt="person">
+                        <span class="move layer elem_color" data-depth=".7"></span>
+                        <span class="move layer" data-depth="-.7"></span>
+                      </div>
+                      <div class="social ">
+                        <a href="#" class="btn text_color"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="btn text_color"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="btn text_color"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="btn text_color"><i class="fa-brands fa-linkedin-in "></i></a>
+                      </div>
+                    </div>
+                    <!-- my image end-->
+                  </div>
+                  <!-- second collumn -->
+                  <div class="col-12 col-md-7 col-lg-8">
+                    <!-- text part -->
+                    <div class="text_area text-center text-md-start">
+                      <h1 class="h_text1">Hi, I'm<span class="user_name elem_color"> Aadel Banat</span>.</h1>
+                      <h2 class="h_text2"></h2>
+                      <p class="h_para">I always seek perfection in my work and
+                        try to Improve Myself to learn from my mistake.
+                       I'm a professional web designer and front-end developer from Bangladesh.</p>
+                       <div class="buttons">
+                        <a href="#" class="h_btn text_color"><span class="material-symbols-outlined">person</span> More About Me <div class="btn_border"></div></a>
+                        <a href="#" class="h_btn text_color"><span class="material-symbols-outlined">folder_open</span> Portfolio <div class="btn_border"></div></a>
+                       </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <!-----------$------------$---------
+                        home page end
+                        -------------$-------------$-------->
+          <!-----------$------------$---------
+                        about page start
+                        -------------$-------------$-------->
+          
+          <div class="tab-pane fade" id="about" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+            <div id="about">
+              <div class="container ">
+                <div class="about_content">
+                  <div class="container">
+                    <div class="row ab_content justify-content-center justify-content-lg-start mx-0 px-md-4">
+                      <div class="col-8 col-md-6 col-lg-3">
+                        <div class="ab_picture">
+                          <div class="parson_pic" id="parson_pic">
+                            <img src="./images/person2.jpg" alt="parson" >
+                            <span class="move layer elem_color" data-depth=".7"></span>
+                            <span class="move layer" data-depth="-.7"></span>
+                          </div>
+                          <div class="ab_social ">
+                            <a href="#" class="btn text_color"><i class="fa-brands fa-facebook-f "></i></a>
+                            <a href="#" class="btn text_color"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#" class="btn text_color"><i class="fa-brands fa-instagram "></i></a>
+                            <a href="#" class="btn text_color"><i class="fa-brands fa-linkedin-in "></i></a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-11 col-lg-9">
+                        <div class="ab_text_part">
+                          <h2 class="ab_head">About <span class="text_color">Me</span></h2>
+                          <div class="row">
+                            <div class="col-12 col-md-6">
+                              <div class="left_txt">
+                                <ul class="ab_list">
+                                  <li><b>Full Name :</b> Muhammod Aadel Banat</li>
+                                  <li><b>Age :</b> 23</li>
+                                  <li><b>Language :</b> Bangla,Enlish,Arabic</li>
+                                  <li><b>Phone No :</b> +987654321</li>
+                                  <li><b>Email :</b> youremail@gmail.com</li>
+                                  <li><b>Address :</b> South mourail, Brahmonbaria, Chattogram, Bangladesh</li>
+                                </ul>
+                              </div>
+      
+                            </div>
+                            <div class="col-12 col-md-6">
+                              <div class="right_text">
+                                <h3 class="ab_title">All things are possible.</h3>
+                                <p class="ab_para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet eos soluta suscipit perspiciatis quas modi quis. Numquam, alias neque explicabo distinctio asperiores, deleniti vero soluta ad eum fugiat, blanditiis a inventore pariatur alias neque explicabo distinctio asperiores, deleniti vero soluta ad eum fugiat, blanditiis a inventore pariatur.</p>
+                              </div>
+      
+                            </div>
+                          </div>
+    
+                          <span class="up_shape bg_color"></span>
+                          <span class="down_shape bg_color"></span>
+                        </div>
+                        
+                      </div>
+                    </div>
+    
+                    <!-- skill part start -->
+                    <div class="row justify-content-center mt-5">
+                      <div class="col-12 text-center"><h3 class="skil_head"><span class="text_color">ski</span>lls</h3></div>
+                      <div class="col-md-4">
+                        <div class="skill">
+                          <div class="skill_box">
+                            <h4 class="skill_title">html</h4>
+                            <div class="persent"><span class="num" data-per="80%"></span></div>
+                            <div class="progress">
+                              <div class="progress-bar"></div>
+                            </div>
+    
+                          </div>
+                          <div class="skill_box">
+                            <h4 class="skill_title">Css</h4>
+                            <div class="persent"><span class="num" data-per="70%"></span></div>
+                            <div class="progress">
+                              <div class="progress-bar"></div>
+                            </div>
+    
+                          </div>
+                          <div class="skill_box">
+                            <h4 class="skill_title">javascript</h4>
+                            <div class="persent"><span class="num" data-per="40%"></span></div>
+                            <div class="progress">
+                              <div class="progress-bar"></div>
+                            </div>
+    
+                          </div>
+                        </div>
+                      </div>
+    
+    
+                      <div class="col-md-4">
+                        <div class="skill">
+                          <div class="skill_box">
+                            <h4 class="skill_title">scss</h4>
+                            <div class="persent"><span class="num" data-per="60%"></span></div>
+                            <div class="progress">
+                              <div class="progress-bar"></div>
+                            </div>
+    
+                          </div>
+                          <div class="skill_box">
+                            <h4 class="skill_title">react</h4>
+                            <div class="persent"><span class="num" data-per="50%"></span></div>
+                            <div class="progress">
+                              <div class="progress-bar"></div>
+                            </div>
+    
+                          </div>
+                          <div class="skill_box">
+                            <h4 class="skill_title">photoshop</h4>
+                            <div class="persent"><span class="num" data-per="70%"></span></div>
+                            <div class="progress">
+                              <div class="progress-bar"></div>
+                            </div>
+    
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- skill part end -->
+
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        <!-----------$------------$---------
+                        about page end
+                        -------------$-------------$-------->
+          <!-----------$------------$---------
+                        experience page start
+                        -------------$-------------$-------->
+          <div class="tab-pane fade" id="experience" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+            <div class="container ">
+              <div class="row justify-content-center text-center">
+                <div class="col-8">
+                  <h2 class="heading">Education & <span class="text_color">Experience</span></h2>
+                </div>
+              </div>
+              <div class="exper_scroll">
+                <div class="container exper_content">
+                  
+                  <div class="row ">
+                    <!-- first collumn -->
+                    <div class="col-md-6">
+                      <h3 class="ex_heading">Education</h3>
+                      <div class="ed_detail">
+                        <div class="detail_box">
+                          <span class="shape"></span>
+                          <p class="date"><span class="material-symbols-outlined">calendar_month</span> july 10, 2009</p>
+                          <h4 class="degree">Bachelor degree <span> - Moscow high scholl</span></h4>
+                          <p class="ex_para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa repellat et est mollitia unde incidunt qui fugit quis.</p>
+                        </div>
+                        <div class="detail_box">
+                          <span class="shape"></span>
+                          <p class="date"><span class="material-symbols-outlined">calendar_month</span> june 15, 2012</p>
+                          <h4 class="degree">Engineering degree <span> - Istanbul University.</span></h4>
+                          <p class="ex_para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa repellat et est mollitia unde incidunt qui fugit quis.</p>
+                        </div>
+                        <div class="detail_box">
+                          <span class="shape"></span>
+                          <p class="date"><span class="material-symbols-outlined">calendar_month</span> march  15, 2015</p>
+                          <h4 class="degree">web Masters degree <span> - paris university</span></h4>
+                          <p class="ex_para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa repellat et est mollitia unde incidunt qui fugit quis.</p>
+                        </div>
+                      </div>
+                    </div>
+    
+                    <!-- second collumn -->
+                    <div class="col-md-6">
+                      <h3 class="ex_heading">Experience</h3>
+                      <div class="ed_detail">
+                        <div class="detail_box">
+                          <span class="shape"></span>
+                          <p class="date"><span class="material-symbols-outlined">calendar_month</span> june 15, 2013 -2016</p>
+                          <h4 class="degree">web designer <span> - envto</span></h4>
+                          <p class="ex_para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa repellat et est mollitia unde incidunt qui fugit quis.</p>
+                        </div>
+                        <div class="detail_box">
+                          <span class="shape"></span>
+                          <p class="date"><span class="material-symbols-outlined">calendar_month</span> june 15, 2014 -2017</p>
+                          <h4 class="degree">web developer <span> - facebook Company</span></h4>
+                          <p class="ex_para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa repellat et est mollitia unde incidunt qui fugit quis.</p>
+                        </div>
+                        <div class="detail_box">
+                          <span class="shape"></span>
+                          <p class="date"><span class="material-symbols-outlined">calendar_month</span> june 15, 2014 -2017</p>
+                          <h4 class="degree">UI/UX designer <span> - google</span></h4>
+                          <p class="ex_para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa repellat et est mollitia unde incidunt qui fugit quis.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+          
+          <!-----------$------------$---------
+                        experience page end
+                        -------------$-------------$-------->
+          <!-----------$------------$---------
+                        portfolio page start
+                        -------------$-------------$-------->
+          <div class="tab-pane fade" id="portfolio" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+            <div class="container">
+              <!-- heading part  -->
+              <div class="row justify-content-center text-center ">
+                <div class="col-8">
+                  <h2 class="heading">port<span class="text_color">folio</span></h2>
+                </div>
+              </div>
+
+              <!-- second row -->
+              <div class="port_content">
+                <div class="row justify-content-center">
+                  <div class="col-12">
+                    <div class="filter_btn">
+                      <button type="button" class="mixitup-control-active" data-filter="all">All</button>
+                      <button type="button" data-filter=".design">Design</button>
+                      <button type="button" data-filter=".development">Development</button>
+                      <button type="button" data-filter=".photography">Photography</button>
+                      <button type="button" data-filter=".templates">templates</button>
+                    </div>
+                  </div>
+                </div>
+  
+                <!-- therd row -->
+                <div class="row mix_container">
+                  <div class="col-sm-12 col-md-6 col-lg-4 mix development design" data-order="1">
+                    <div class="image_box " >
+                      <h6 class="por_title">Design</h6>
+                      <img src="./images/port_image1.jpg" alt="image" class="port_imag">
+                      <div class="overlay">
+                        <a href="#"><span class="material-symbols-outlined">link</span></a>
+                        <a href="#"><span class="material-symbols-outlined">search</span></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-6 col-lg-4 mix development" data-order="2">
+                    <div class=" image_box " >
+                      <h6 class="por_title ">Development</h6>
+                      <img src="./images/port_image2.jpg" alt="image" class="port_imag">
+                      <div class="overlay">
+                        <a href="#"><span class="material-symbols-outlined">link</span></a>
+                        <a href="#"><span class="material-symbols-outlined">search</span></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-6 col-lg-4 mix templates photography" data-order="3">
+                    <div class=" image_box " >
+                      <h6 class="por_title ">Photography</h6>
+                      <h6 class="por_title ">Design</h6>
+                      <img src="./images/port_image3.jpg" alt="image" class="port_imag">
+                      <div class="overlay">
+                        <a href="#"><span class="material-symbols-outlined">link</span></a>
+                        <a href="#"><span class="material-symbols-outlined">search</span></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-6 col-lg-4 mix templates" data-order="4">
+                    <div class=" image_box " data-order="1">
+                      <h6 class="por_title">templates</h6>
+                      <img src="./images/port_image4.jpg" alt="image" class="port_imag">
+                      <div class="overlay">
+                        <a href="#"><span class="material-symbols-outlined">link</span></a>
+                        <a href="#"><span class="material-symbols-outlined">search</span></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-6 col-lg-4 mix design" data-order="4">
+                    <div class=" image_box ">
+                      <h6 class="por_title">Design</h6>
+                      <img src="./images/port_image5.jpg" alt="image" class="port_imag">
+                      <div class="overlay">
+                        <a href="#"><span class="material-symbols-outlined">link</span></a>
+                        <a href="#"><span class="material-symbols-outlined">search</span></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-6 col-lg-4 mix photography" data-order="3">
+                    <div class=" image_box " >
+                      <h6 class="por_title ">Photography</h6>
+                      <img src="./images/port_image6.jpg" alt="image" class="port_imag">
+                      <div class="overlay">
+                        <a href="#"><span class="material-symbols-outlined">link</span></a>
+                        <a href="#"><span class="material-symbols-outlined">search</span></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <!-----------$------------$---------
+                        portfolio page end
+                        -------------$-------------$-------->
+          <!-----------$------------$---------
+                        blog page start
+                        -------------$-------------$-------->
+          <div class="tab-pane fade" id="blog" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+            <div class="container">
+               <!-- heading part  -->
+               <div class="row justify-content-center text-center">
+                  <div class="col-8">
+                    <h2 class="heading">Latest<span class="text_color"> posts</span></h2>
+                  </div>
+                </div>
+                <div class="blog_content">
+                  <div class="container">
+                    <div class="row">
+                      
+                      <div class="col-sm-12 col-md-6">
+                        <div class="blog_box">
+                          <div class="bl_img">
+                            <img src="./images/port_image1.jpg" alt="image">
+                              <p class="bl_time"><span class="date">1 </span><span class="month">jan</span></p>
+  
+                          </div>
+                          <div class="bl_text">
+                            <h4 class="bl_title">Experience Has Taught Well</h4>
+                            <p class="bl_para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias ea, ex cupiditate vel architecto...</p>
+                            <a href="#" class="bl_btn">read more</a>
+
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-sm-12 col-md-6">
+                        <div class="blog_box">
+                          <div class="bl_img">
+                            <img src="./images/port_image2.jpg" alt="image">
+                              <h6 class="bl_time"><span class="date">1 </span><span class="month">jan</span></h6>
+  
+                          </div>
+                          <div class="bl_text">
+                            <h4 class="bl_title">Experience Has Taught Well</h4>
+                            <p class="bl_para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias ea, ex cupiditate vel architecto...</p>
+                            <a href="#" class="bl_btn">read more</a>
+
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-sm-12 col-md-6">
+                        <div class="blog_box">
+                          <div class="bl_img">
+                            <img src="./images/port_image3.jpg" alt="image">
+                              <h6 class="bl_time"><span class="date">31 </span><span class="month">may</span></h6>
+  
+                          </div>
+                          <div class="bl_text">
+                            <h4 class="bl_title">Experience Has Taught Well</h4>
+                            <p class="bl_para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias ea, ex cupiditate vel architecto...</p>
+                            <a href="#" class="bl_btn">read more</a>
+
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-sm-12 col-md-6">
+                        <div class="blog_box">
+                          <div class="bl_img">
+                            <img src="./images/port_image4.jpg" alt="image">
+                              <h6 class="bl_time"><span class="date">21 </span><span class="month">may</span></h6>
+  
+                          </div>
+                          <div class="bl_text">
+                            <h4 class="bl_title">Experience Has Taught Well</h4>
+                            <p class="bl_para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias ea, ex cupiditate vel architecto...</p>
+                            <a href="#" class="bl_btn">read more</a>
+
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-sm-12 col-md-6">
+                        <div class="blog_box">
+                          <div class="bl_img">
+                            
+                            <img src="./images/port_image5.jpg" alt="image">
+                              <h6 class="bl_time"><span class="date">15 </span><span class="month">Aug</span></h6>
+  
+                          </div>
+                          <div class="bl_text">
+                            <h4 class="bl_title">Experience Has Taught Well</h4>
+                            <p class="bl_para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias ea, ex cupiditate vel architecto...</p>
+                            <a href="#" class="bl_btn">read more</a>
+
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-sm-12 col-md-6">
+                        <div class="blog_box">
+                          <div class="bl_img">
+                            <img src="./images/port_image6.jpg" alt="image">
+                              <h6 class="bl_time"><span class="date">1 </span><span class="month">jun</span></h6>
+  
+                          </div>
+                          <div class="bl_text">
+                            <h4 class="bl_title">Experience Has Taught Well</h4>
+                            <p class="bl_para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias ea, ex cupiditate vel architecto...</p>
+                            <a href="#" class="bl_btn">read more</a>
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+            </div>
+          </div>
+          <!-----------$------------$---------
+                        blog page end
+                        -------------$-------------$-------->
+          <!-----------$------------$---------
+                        contact us page start
+                        -------------$-------------$-------->
+                        
+          <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+            <div class="contact_scroll">
+              <div class="container">
+                <!-- heading part  -->
+                <div class="row justify-content-center text-center">
+                  <div class="col-8">
+                    <h2 class="heading">get in<span class="text_color"> touch</span></h2>
+                  </div>
+                </div>
+                <!-- .contact content -->
+                <div class="row cont_content">
+                  <div class="col-12 col-md-6">
+                    <div class="contact_box">
+                      <form action="#">
+                        <label for="name">
+                          <span class="u_name">Name</span>
+                          <input type="text" id="name" placeholder="Name">
+                        </label>
+  
+                        <label for="email">
+                          <span class="u_email">email</span>
+                          <input type="text" id="email" placeholder="Email">
+                        </label>
+  
+                        <label for="pass">
+                          <span class="u_pass">Password</span>
+                          <input type="text" id="pass" placeholder="Password">
+                        </label>
+                      </form>
+                    </div>
+                  </div>
+  
+  
+                  <div class="col-12 col-md-6">
+                    <form action="#">
+                        <label for="message">
+                          <span class="mess">Message</span>
+                          <textarea id="message" placeholder="Message"></textarea>
+                        </label>
+                    </form>
+                  </div>
+                </div>
+  
+              </div>
+
+            </div>
+          </div>
+          <!-----------$------------$---------
+                        contact us page end
+                        -------------$-------------$-------->
+        </div>
+
+
+
+
+        <div class="color_pick">
+          <div class="setting">
+            <span class="material-symbols-outlined ">settings</span>
+          </div>
+          <div class="th_title elem_color">Theme color</div>
+          <div class="color_btn one " data-color="#A62D4D" ></div>
+          <div class="color_btn two " data-color="#205295"></div>
+          <div class="color_btn three " data-color="#309d0d" ></div>
+          <div class="color_btn four " data-color="#892d8f"></div>
+        </div>
+        </div>
+
+        <!-- color picker start-->
+        
+        
+        <!-- color picker end-->
+      </div>
+    
+    <!-----------$----------$-----------
+                full body end
+                -------------$-----------$---------->
+    <!-- bootstrap js link -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <!-- particle js -->
+    <script src="./js/particles.min.js"></script>
+    <!-- particle app js -->
+    <script src="./js/app.js"></script>
+    <!-- jquery link -->
+    <script src="./js/jquery3.6.2.js"></script>
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js" integrity="sha512-nKZDK+ztK6Ug+2B6DZx+QtgeyAmo9YThZob8O3xgjqhw2IVQdAITFasl/jqbyDwclMkLXFOZRiytnUrXk/PM6A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+    <!-- typing js link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/TypewriterJS/2.19.0/core.min.js" integrity="sha512-t4NGjfaRaGCjmiTGBsiG3w8FCp8ZY7dPlwZAXfeoGPARUT/rt3OP0NpQkblSgZy/2R8vPTXiEcq/zcWIJ8NusQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- mixitup link -->
+    <script src="./js/mixitup.min.js"></script>
+    <!-- parallax js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    <!-- custom js link -->
+    <!-- <script src="./js/custom_tool.js"></script> -->
+    <script src="./js/custom.js"></script>
+</body>
+</html>

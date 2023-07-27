@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import "font";
+@import "flexbox";
+@import "varaibles";
+@import "common";
+@media screen and (max-width: 1140px) {
+    #mission{
+        width: 100%;
+
+        .miss_para{
+            gap: 2rem;
+            p{
+                width: 100%;
+                flex-grow: 1;
+            }
+        }
+    }
+
+
+    
+    footer{
+        .footer_wrapper{
+
+            .footer_content{
+                
+                .contact{
+                    flex-wrap: wrap;
+                    @include flex_box(center,center);
+                    gap: 3rem;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 992px){
+    header{
+        @include flex_box(center, center);
+        padding: 0.4rem 1.5rem;
+        background: url(../images/footer-bg.jpg) center;
+        &.sticky{
+            background: url(../images/footer-bg.jpg) center;
+        }
+        .logo{
+            width: 6rem;
+        }
+
+        
+        .menu_icon{
+            order: 1;
+            margin: 0;
+            border: none;
+            width: 0;
+
+            span{
+                width: 1.9rem;
+                margin-bottom: .2rem;
+            }
+        }
+
+        .header_btn{
+            display: none !important;
+        }
+    }
+    #home{
+        height: 100vh;
+
+        .side_left{
+            display: none;
+        }
+    }
+
+    #mission{
+        margin-top: 0;
+        padding-top: 3rem;
+        padding-bottom: 4rem;
+
+        .pic_scaled{
+            display: none;
+        }
+    }
+    #menu{
+
+        h2{
+            margin-bottom: 1.8rem;
+        }
+        
+        .menu_items{
+            gap: 1rem .9rem !important;
+            @include flex_box(start,center);
+            flex-wrap: wrap;
+        
+            
+            .item{
+                transform: translateY(0) !important;
+            }
+          }
+    }
+
+      
+
+      footer{
+
+        .footer_wrapper{
+            .logo{
+
+
+
+                &::before,&::after{
+                    width: 35%;
+                }
+
+                &::after{
+                    left: calc(100% - 35%);
+                }
+            }
+
+            .footer_content{
+                border: none;
+
+                nav{
+                    flex-direction: column;
+
+                    a{
+                        font-size: 1.2rem;
+                        margin-bottom: .6rem;
+                    }
+                }
+
+                .contact{
+                    display: none;
+                }
+            }
+
+            .footer_bottom{
+
+                p{
+                display: none;
+                }
+            }
+        }
+      }
+}
+@media screen and (min-width: 992px){
+    
+    
+    footer{
+        .bottom{
+            display: none;
+        }
+        
+
+    }
+}
+@media screen and (max-width: 752px){
+    #home{
+        padding-left: 1.7rem;
+        padding-right: 1.7rem;
+        text-align: center;
+        .hero_para{
+            font-size: 2rem;
+        }
+        .main_text{
+            font-size: 5rem;
+            
+        }
+    }
+    #mission{
+
+        h2{
+            font-size: 2rem;
+        }
+    }
+
+    #components{
+        padding: 2rem 1.7rem;
+        height: 45rem;
+
+        h2{
+            font-size: 5.6rem;
+        }
+
+        .comp_bg{
+
+
+            img{
+                width: 28vw;
+                position: absolute;
+                top: 0;
+                left: 0;
+    
+                &[alt="home-pic-1"]{
+                    top: 0rem;
+                    left: calc(100% - 30vw);
+                }
+                &[alt="home-pic-2"]{
+                    top: 11rem;
+                    left: 0;
+                }
+                &[alt="home-pic-3"]{
+                    top: 23rem;
+                    left: 22vw;
+                }
+                &[alt="home-pic-4"]{
+                    top: 24rem;
+                    left: calc(100% - 30vw);
+                }
+                &[alt="home-pic-5"]{
+                    top: 13rem;
+                    left: calc(100% - 45vw);
+                    width: 32vw;
+                }
+    
+            }
+
+        }
+    }
+}
+@media screen and (max-width: 572px){
+    .menu_box{
+        
+
+        li{
+            &:first-child{
+                margin-top: 3rem;
+            }
+            a{
+                font-size: 1rem;
+                
+            }
+
+        }
+
+        .order_box{
+            .btn{
+                width: 10rem;
+                padding: .5rem 0;
+                font-size: .5;
+            }
+        }
+    }
+    #mission{
+        .mis_box{
+            .miss_para{
+                flex-wrap: wrap;
+            }
+        }
+    }
+    #components{
+
+        h2{
+            font-size: 3.5rem;
+        }
+
+        
+    }
+    footer{
+
+        .footer_wrapper{
+            .logo{
+
+
+
+                &::before,&::after{
+                    width: 27%;
+                }
+    
+                &::after{
+                    left: calc(100% - 27%);
+                }
+            }
+        }
+        .logo{
+
+
+
+            &::before,&::after{
+                width: 35%;
+            }
+
+            &::after{
+                left: calc(100% - 27%);
+            }
+        }
+        .bottom{
+            .social{
+                flex-wrap: wrap;
+                padding-right: 1rem;
+                gap: .2rem;
+            }
+        }
+    }
+}
+@media screen and (max-width: 353px){
+    #home{
+        .hero_para{
+            font-size: 1rem;
+        }
+        .main_text{
+            font-size: 3rem;
+            
+        }
+    }
+    #components{
+
+
+        h2{
+            font-size: 14vw;
+        }
+    }
+}

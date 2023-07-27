@@ -1,0 +1,683 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@100;200;300;400;500;600;700;800;900&family=Kanit:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap');
+*{padding: 0;margin: 0;box-sizing: border-box;}
+::before,::after{box-sizing: border-box;}
+ul,li,ol{
+    list-style: none;
+
+}
+@font-face {
+    font-family: helvetica-light;
+    src: url(../fonts/helvetica-light-587ebe5a59211.ttf);
+}
+a{
+    text-decoration: none;
+    transition: all linear .3s;
+    display: inline-block;
+}
+p{
+    font-family: helvetica-light;
+}
+html,body{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+.container{
+    width: 1330px;
+    margin: auto;
+}
+/* commond stale code end */
+/************x******** navigation bar style code start **********x*******/
+nav{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    transition: all linear .4s;
+}
+nav.collapse{
+    position: fixed;
+    top: 0;
+    left: auto;
+    background: #EA1C3B;
+}
+nav .nav-row{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 60px;
+    padding: 20px 0;
+}
+nav.collapse .nav-row{
+    justify-content: space-between;
+    padding: 5px 0;
+}
+nav .nav-row .logo{
+    width: 180px;
+}
+nav .nav-row .menu{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 40px;
+}
+nav .nav-row .menu> a{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20.83px;
+    font-weight: 500;
+    color: #fff;
+    padding: 20px;
+}
+nav .nav-row .social{
+    margin-bottom: -20px;
+    display: flex;
+    gap: 10px;
+    margin-left: auto;
+}
+nav.collapse .social{
+    display: none;
+}
+nav .nav-row .social> a{
+    width: 30px;
+    height: 30px;
+    background: #EA1C3B;
+    color: #DBE3EA;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/************x******** navigation bar style code end **********x*******/
+/************x******** banner style code start **********x*******/
+#banner{
+    width: 100%;
+    background: url(../images/banner-img.png) no-repeat right;
+    background-size: 50% cover;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+#banner .banner-content{
+    position: relative;
+    z-index: 1;
+    padding: 110px 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#banner .banner-content::before{
+    content: '';
+    width: 400vw;
+    height: 120%;
+    position: absolute;
+    top: -10%;
+    right: 370px;
+    transform: skewX(-15deg);
+    background: #EA1C3B;
+    z-index: -1;
+
+}
+#banner .banner-content::after{
+    content: '';
+    width: 200px;
+    height: 120%;
+    position: absolute;
+    top: -10%;
+    right: 238px;
+    transform: skewX(-15deg);
+    background: linear-gradient(to right,rgba(0,0,0,.7) 70%,rgba(0,0,0,.5) 70%);
+    z-index: -1;
+}
+#banner .banner-content .banner-text{
+    width: 50%;
+    color: #fedac3;
+}
+#banner .banner-content .banner-text h1{
+    font-family: 'Kanit', sans-serif;
+    font-size: 150.15px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+#banner .banner-content .banner-text p{
+    font-size: 20.93px;
+    font-weight: 400;
+    margin: 40px 0 90px;
+}
+#banner .banner-content .banner-text .btn{
+    padding: 15px 22px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: inherit;
+    background: #131316;
+    display: inline-block;
+    border-radius: 30px;
+}
+/************x******** banner style code end **********x*******/
+/************x******** places style code start **********x*******/
+#places{
+    width: 100%;
+    padding: 120px 0;
+    background: #EBEBE9;
+
+}
+/* heading style start */
+#places .heading{
+    margin-bottom: 110px;
+}
+#places .heading h2{
+    font-family: 'Kanit', sans-serif;
+    font-size: 62.5px;
+    font-weight: 700;
+    color: #1f262f;
+    position: relative;
+}
+#places .heading h2::before{
+    content: '';
+    width: 50%;
+    height: 5px;
+    background: #8E0C20;
+    position: absolute;
+    bottom: -35px;
+}
+/* heading style end */
+/* places row  style start */
+#places .places-row{
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+}
+#places .places-row .place-box{
+    width: 410px;
+}
+.places-row .place-box .img-box{
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    margin: auto;
+}
+.places-row .place-box .text-box{
+    width: 100%;
+    text-align: center;
+}
+
+.place-box .text-box h3{
+    font-family: 'Kanit', sans-serif;
+    font-size: 25px;
+    text-transform: uppercase;
+    margin: 40px 0 50px;
+}
+.place-box .text-box p{
+    font-family: 'Kanit', sans-serif;
+    font-size: 25px;
+}
+/* places row  style end */
+/************x******** places style code end **********x*******/
+/************x******** get out style code start **********x*******/
+#getOut{
+    width: 100%;
+    background: url(../images/img.png) no-repeat left;
+    background-size: 50% 100%;
+    overflow: hidden;
+}
+#getOut .getOut-row{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 200px 0;
+    position: relative;
+    z-index: 1;
+}
+#getOut .getOut-row::before{
+    content: '';
+    width: 400vw;
+    height: 120%;
+    position: absolute;
+    top: -10%;
+    left: 370px;
+    transform: skewX(15deg);
+    background: #131316;
+    z-index: -1;
+    border-left: 70px solid #13080C;
+
+}
+#getOut .getOut-row::after{
+    content: '';
+    width: 120px;
+    height: 120%;
+    position: absolute;
+    top: -10%;
+    left: 250px;
+    transform: skewX(15deg);
+    background: linear-gradient(to right,rgba(201,34,61,.3) 49%,rgba(201,34,61,.5) 50%);
+    z-index: -1;
+}
+#getOut .getOut-row .getOut-text{
+    width: 800px;
+    color: #fedac3;
+    margin-top: 40px;
+}
+#getOut .getOut-row .getOut-text h2{
+    font-family: 'Kanit', sans-serif;
+    font-size: 166.05px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 130px;
+    white-space: nowrap;
+}
+#getOut .getOut-row .getOut-text p{
+    font-size: 21.66px;
+    margin: 52px 0 60px;
+}
+#getOut .getOut-row .getOut-text .btn{
+    padding: 15px 22px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: #131316;
+    background: #EA1C3B;
+    display: inline-block;
+    border-radius: 30px;
+}
+/************x******** get out style code end **********x*******/
+/************x******** Aventure style code start **********x*******/
+#adventure{
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    
+}
+#adventure .overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../images/pettern.png) no-repeat,url(../images/pettern2.png) no-repeat;
+    background-size: 100% 58%,75% 40%;
+    background-position: top,bottom right;
+    z-index: 1;
+}
+/* adventure top area style */
+#adventure .top-area{
+    width: 100%;
+    padding: 120px 0;
+    background: #131316;
+    color: #fedac3;
+    
+}
+#adventure .top-area .top-text{
+    position: relative;
+    z-index: 1;
+}
+.top-area h2,.top-area h3,.top-area h4{
+    font-family: 'Kanit', sans-serif;
+    font-size: 240.57px;
+    font-weight: 700;
+    text-transform: uppercase;;
+}
+#adventure .top-area h4{
+    font-size: 25.55px;
+    margin-top: -55px;
+}
+#adventure .top-area h3{
+    font-size: 43.55px;
+}
+/* adventure bottom area style */
+#adventure .bottom-area{
+    width: 100%;
+    background: linear-gradient(83deg, rgba(70,124,67,0) 48%,#131316 48%),url(../images/woman.jpg) no-repeat;
+    background-size:cover,55% 100%;
+    background-position: top, left bottom;
+}
+#adventure .bottom-area .adventure-row{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 350px 0;
+    position: relative;
+    z-index: 1;
+}
+#adventure .bottom-area .adventure-row::after{
+    content: '';
+    width: 142px;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 535px;
+    transform: skewX(7deg);
+    background: linear-gradient(to right,rgba(201,34,61,.3) 35%,rgba(201,34,61,.5) 35%);
+}
+#adventure .bottom-area .adventure-row .adventure-text{
+    width: 600px;
+    color: #fedac3;
+    margin-top: 40px;
+    text-align: left;
+}
+#adventure .bottom-area .adventure-row .adventure-text h2{
+    font-family: 'Kanit', sans-serif;
+    font-size: 99.21px;
+    font-weight: 700;
+    line-height: 80px;
+}
+.bottom-area .adventure-row .adventure-text h2 span{
+    font-size: 278.97px;
+}
+.bottom-area .adventure-row .adventure-text h4{
+    font-family: 'Kanit', sans-serif;
+    font-size: 26.67px;
+    padding: 15px 0;
+}
+/************x******** Aventure style code end **********x*******/
+/************x******** descover style code start **********x*******/
+#discover{
+    width: 100%;
+    padding: 120px 0;
+    background: #EA1C3B url(../images/pettern3.png) no-repeat right;
+    background-size: cover;
+    color: #fedac3;
+}
+#discover h2,#discover h4{
+    font-family: 'Kanit', sans-serif;
+    font-size: 179.08px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+#discover h4{
+    font-size: 41.76px;
+}
+/************x******** descover style code end **********x*******/
+/************x******** descover style code start **********x*******/
+#tour{
+    width: 100%;
+    padding: 60px 0 20px;
+    background: #DBE3EA url(../images/pettern5.png) no-repeat;
+    background-size: 100% auto;
+    background-position:left top;
+    color: #13080C;
+    position: relative;
+    overflow: hidden;
+}
+#tour::before{
+    content: '';
+    height: 100%;
+    width: 100px;
+    background: url(../images/pettern4.png) no-repeat right;
+    position: absolute;
+    top: 71px;
+    right: -16px;
+    z-index: 10;
+
+}
+#tour h2{
+    font-family: 'Kanit', sans-serif;
+    font-size: 137.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/************x******** descover style code end **********x*******/
+/************x******** poler style code start **********x*******/
+#poler{
+    width: 100%;
+    padding: 140px 0;
+    background: url(../images/img3.png) no-repeat;
+    background-size: 55% 100%;
+    background-position: right bottom;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+#poler::after{
+    content: '';
+    width: 200px;
+    height: 105%;
+    position: absolute;
+    top: 0%;
+    right: 500px;
+    transform: skewX(-8deg);
+    background: linear-gradient(to right,rgba(201,34,61,.5) 70%,rgba(201,34,61,.3) 70%);
+    z-index: -1;
+}
+#poler::before{
+    content: '';
+    width: 400vw;
+    height: 105%;
+    position: absolute;
+    top: 0%;
+    right: 630px;
+    transform: skewX(-8deg);
+    background: #1f262f;
+    z-index: -1;
+}
+#poler .poler-content{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+#poler .poler-content .poler-text{
+    width: 50%;
+    color: #fedac3;
+}
+#poler .poler-content .poler-text h2{
+    font-family: 'Kanit', sans-serif;
+    font-size: 130.45px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+#poler .poler-content .poler-text p{
+    font-family: 'Kanit', sans-serif;
+    font-size: 17.1px;
+}
+#poler .poler-content .poler-text .icons{
+    width: 100%;
+    margin: 37px 0 106px;
+}
+#poler .poler-content .poler-text .icons a{
+    margin-right: 35px;
+}
+#poler .poler-content .poler-text .icons a img{
+    width: 72px;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+}
+#poler .poler-content .poler-text .p-btn{
+    font-family: 'Kanit', sans-serif;
+    font-weight: 700;
+    font-size: 23px;
+    padding: 10px 80px;
+    color: #131316;
+    background: #EA1C3B;
+    text-transform: uppercase;
+    border-radius: 15px;
+}
+/************x******** poler style code end **********x*******/
+
+/************x******** getOut2 style code start **********x*******/
+#getOut2{
+    width: 100%;
+    padding: 140px 0;
+    background: url(../images/img4.png) no-repeat;
+    background-size: 55% 101%;
+    background-position: left bottom;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+#getOut2::after{
+    content: '';
+    width: 200px;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 438px;
+    transform: skewX(8deg);
+    background: linear-gradient(to right,rgba(201,34,61,.3) 40%,rgba(201,34,61,.5) 40%);
+    z-index: -1;
+}
+#getOut2::before{
+    content: '';
+    width: 400vw;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 580px;
+    transform: skewX(8deg);
+    background: #EA1C3B;
+    z-index: -1;
+}
+#getOut2 .getOut2-content{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+#getOut2 .getOut2-content .getOut2-text{
+    width: 650px;
+    display: flex;
+    flex-direction: column;
+    color: #fedac3;
+}
+#getOut2 .getOut2-content .getOut2-text h2{
+    font-family: 'Kanit', sans-serif;
+    font-size: 130.45px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 100px;
+}
+#getOut2 .getOut2-content .getOut2-text p{
+    font-family: 'Kanit', sans-serif;
+    font-size: 17.1px;
+    margin-top: 40px;
+}
+#getOut2 .getOut2-content .getOut2-text .icons{
+    width: 100%;
+    margin: 37px 0 106px;
+}
+#getOut2 .getOut2-content .getOut2-text .icons a{
+    margin-right: 35px;
+}
+#getOut2 .getOut2-content .getOut2-text .icons a img{
+    width: 72px;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+}
+#getOut2 .getOut2-content .getOut2-text .p-btn{
+    font-family: 'Kanit', sans-serif;
+    font-weight: 700;
+    font-size: 23px;
+    padding: 10px 80px;
+    color: #fedac3;
+    background: #131316;
+    text-transform: uppercase;
+    border-radius: 15px;
+    align-self: flex-end;
+}
+/************x******** getOut2 style code end **********x*******/
+/************x******** contact style code start **********x*******/
+#contact{
+    width: 100%;
+    padding: 200px 0 300px;
+    background: url(../images/pettern6.png) no-repeat, #131316;
+}
+#contact .contact-row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#contact .contact-row .contact-text{
+    width: 100%;
+    text-align: center;
+    color: #fedac3;
+}
+#contact .contact-row .contact-text h2{
+    font-family: 'Kanit', sans-serif;
+    font-size: 93px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+#contact .contact-row .contact-text p{
+    font-family: 'Bitter', serif;
+    font-size: 36.86px;
+    font-weight: 400;
+    width: 80%;
+    margin: 75px auto 100px;
+}
+#contact .contact-row .contact-text form{
+    width: 1200px;
+    height: 80px;
+    position: relative;
+    font-family: 'Nunito', sans-serif;
+    font-size: 31px;
+    font-weight: 400;
+    margin: auto;
+}
+#contact .contact-row .contact-text input{
+    width: 80%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: none;
+    outline: none;
+    padding: 30px 55px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 31px;
+    font-weight: 400;
+}
+#contact .contact-row .contact-text input[type=submit]{
+    width: 20%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 80%;
+    border: none;
+    outline: none;
+    background: #EA1C3B;
+    color: #fedac3;
+    padding: 0;
+}
+/************x******** contact style code end **********x*******/
+/************x******** footer style code start **********x*******/
+footer{
+    width: 100%;
+    padding: 60px 0;
+    background: #EA1C3B;
+}
+footer .footer-row{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 140px;
+}
+footer .footer-row .footer-box{
+    color: #1f262f;
+}
+footer .footer-row .footer-box:first-child{
+    margin-right: auto;
+}
+footer .footer-row .footer-box h3{
+    font-family: 'Bitter', serif;
+    font-size: 20.83px;
+    font-weight: 700;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+footer .footer-row .footer-box a{
+    display: block;
+    font-family: 'Bitter', serif;
+    font-size: 16.67px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: #1f262f;
+}
+/************x******** footer style code end **********x*******/
+
+
+
+/* 
+font-family: 'Bitter', serif;
+font-family: 'Kanit', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Nunito', sans-serif; */

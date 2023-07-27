@@ -1,0 +1,151 @@
+@media screen and (max-width: 992px) {
+    #home .text_area .h_text1{
+        font-size: 2.3rem;
+    }
+    #home .text_area .h_text2{
+        font-size: 2.8rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container{
+        padding: 20px  20px 0 20px;
+    }
+    .heading{
+        margin-bottom: .5rem;
+    }
+    #dashboard .color_pick{
+        left: 0px;
+    }
+    #home .par_image_box .parson_imag .layer{
+
+    }
+    #home .text_area{
+        padding-left: 0;
+    }
+    #home .text_area .buttons{
+        justify-content: center;
+    }
+    #portfolio .filter_btn{
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 0rem;
+        margin-bottom: .3rem;
+    }
+    #portfolio .filter_btn button{
+        font-size: .7rem;
+    }
+    #portfolio .mix_container{
+        height: 65vh;
+    }
+    
+
+}
+@media screen and (max-width: 400px) {
+    #dashboard{
+        padding-top: 40px;
+    }
+    #home .text_area .h_text2{
+        font-size: 1.8rem;
+    }
+    #home .par_image_box .social{
+        flex-wrap: wrap;
+    }
+    #home .par_image_box .parson_imag{
+        padding: 15px;
+    }
+    #portfolio .filter_btn{
+        margin-bottom: .5rem;
+    }
+    #portfolio .mix_container{
+        padding-right: 0;
+        height: 50vh;
+    }
+
+}
+@media screen and (max-width: 320px) {
+    #about .ab_text_part .ab_head {
+        font-size: 1.6rem;
+    }
+    #about .ab_text_part .ab_title{
+        font-size: .9rem;
+    }
+    #dashboard .nav .menu_toggler{
+        right: 0;
+        top: 42px;
+    }
+    #dashboard .color_pick{
+        top: 42px;
+    }
+    #dashboard .color_pick .color_btn{
+        margin-top: 6px;
+    }
+    #home .text_area .h_text2{
+        font-size: 1.2rem;
+    }
+    .heading{
+        font-size: 1.5rem;
+        margin-bottom: .5rem;
+    }
+    #home .par_image_box .parson_imag{
+        padding: 15px;
+    }
+    #portfolio .mix_container{
+        padding-right: 0;
+        height: 50vh;
+    }
+    #dashboard .nav{
+        /* flex-wrap: wrap; */
+        flex-direction: row;
+        height: fit-content;
+        width: 100%;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    #dashboard .nav .nav-link{
+        margin: 0;
+        padding: .3rem;
+    }
+    #dashboard .nav .nav-link.active .material-symbols-outlined{
+        border: 1px solid var(--black);
+        border-radius: 5px;
+    }
+    #dashboard .nav .nav-link span{
+        font-size: 1.1rem;
+
+    }
+    .nav .nav-link:hover .nav_text{
+        display: none;
+    }
+    #dashboard .nav .nav-link:nth-child(2){
+        margin-top: 0;
+    }
+    #about .ab_picture .parson_pic{
+        padding: 10px;
+    }
+    
+    #about .ab_social a{
+        width: 32px;
+        height: 32px;
+    }
+    #portfolio .filter_btn button{
+        font-size: .5rem;
+        padding: .3rem;
+    }
+    #dashboard .indicator{
+        display: none;
+    }
+    #experience .exper_content{
+        padding: .3rem;
+    }
+    .exper_content .ed_detail .detail_box .degree{
+        font-size: 1rem;
+    }
+}
+/* @media screen and (min-width: 310px) {
+    #portfolio .mix_container{
+        padding-right: 0;
+        height: 50vh;
+    }
+    
+} */

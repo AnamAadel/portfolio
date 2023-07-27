@@ -1,0 +1,62 @@
+@media screen and (max-width: 920px) {
+    #about .about_box{
+        margin-left: 0px;
+    }
+    #weDo .weDo_box .weDo_imag.small{
+        margin: auto;
+    }
+    #service .service_box .icon{
+        margin: auto;
+    }
+}
+@media screen and (max-width: 768px) {
+    .navbar form{
+        padding-left: 30px;
+    }
+    #banner .banner_box .buttons{
+        justify-content: center;
+    }
+    #testimonial .arrows{
+        top: 55%;
+        right: 50%;
+        transform: translateX(calc(50% + 25px));
+        -webkit-transform: translateX(calc(50% + 25px));
+        -moz-transform: translateX(calc(50% + 25px));
+        -ms-transform: translateX(calc(50% + 25px));
+        -o-transform: translateX(calc(50% + 25px));
+    }
+    #contact{
+        padding: 60px 0;
+    }
+    #contact .navbar .social{
+        padding-left: 30px;
+    }
+
+}
+@media screen and (max-width: 576px) {
+    #banner .banner_box .ban_text{
+        font-size: 30px;
+    }
+    #contact .cont_title{
+        font-size: 25px;
+    }
+    #testimonial .arrows{
+        top: 100%;
+        right: 50%;
+        transform: translateX(calc(50% + 20px));
+        -webkit-transform: translateX(calc(50% + 20px));
+        -moz-transform: translateX(calc(50% + 20px));
+        -ms-transform: translateX(calc(50% + 20px));
+        -o-transform: translateX(calc(50% + 20px));
+}
+}
+@media screen and (max-width: 250px){
+    #testimonial .picture{
+        padding: 0;
+    }
+    #contact .buttons .btn{
+        width: 100%;
+        white-space: nowrap;
+    }
+
+}
